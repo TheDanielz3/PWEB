@@ -1,0 +1,15 @@
+<?php use ArmoredCore\WebObjects\URL;
+use ArmoredCore\WebObjects\Layout;
+
+Layout::includeLayout('header');
+
+?>
+
+    <form action="<?= URL::toRoute('calculadora/show')?>"  method="post">
+        Valor do crédito: ' . '<input type="number" name="valor_credito" min="0"><br/><br/>
+        Número de prestações: ' . '<input type="number" name="num_prest" min="0"><br/><br/>
+        <!--Tipo de envio de dados: <input type="text" name="tipo_envio"><br/><br/>-->
+        <input type="submit" value="Submeter">
+    </form>;
+
+<?php Layout::includeLayout('header'); ?>

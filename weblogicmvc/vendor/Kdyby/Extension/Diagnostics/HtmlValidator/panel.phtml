@@ -1,0 +1,60 @@
+<?php
+namespace Kdyby\Extension\Diagnostics\HtmlValidator;
+use tracy;
+?>
+<style>
+	#tracy-debug .tracy-htmlValidation {
+        min-width: 700px;
+    }
+
+	#tracy-debug .tracy-htmlValidation table {
+		width: 100%;
+		max-width: 700px;
+	}
+
+	#tracy-debug .tracy-htmlValidation table pre {
+		max-width: 670px;
+		overflow: hidden;
+		box-shadow: none !important;
+	}
+
+    #tracy-debug .tracy-htmlValidation td span.severenity-1 {
+        color: #aaaa30 !important;
+        font-weight: bold !important;
+    }
+
+    #tracy-debug .tracy-htmlValidation td span.severenity-2 {
+        color: #aa832f !important;
+	    font-weight: bold !important;
+    }
+
+    #tracy-debug .tracy-htmlValidation td span.severenity-3 {
+        color: #aa4c34 !important;
+	    font-weight: bold !important;
+    }
+
+    #tracy-debug .tracy-htmlValidation span.highlight {
+	    background: #CD1818;
+	    color: white;
+	    font-weight: bold;
+	    font-style: normal;
+	    display: block;
+	    padding: 0 .4em;
+	    margin: 0 -.4em;
+    }
+</style>
+
+<h1>Document HTML validation (<?php echo count($errors); ?> problems)</h1>
+
+<div class="tracy-inner tracy-htmlValidation">
+    <table>
+        <?php foreach ($errors as $error): ?>
+        <tr><td><span class="severenity-<?php echo (int)$error->level; ?>">
+            <?php echo htmlspecialchars(ValidatorPanel::$severenity[$error->level] . ' on column ' . $error->column . ': ' . $error->message); ?>
+        </span></td></tr>
+        <tr><td>
+            <?php echo \Tracy\BlueScreen::highlightPhp($html, $error->line, 10); ?>
+        </td></tr>
+        <?php endforeach ?>
+	</table>
+</div>

@@ -1,0 +1,67 @@
+<?php
+
+use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\URL;
+
+Layout::includeLayout('header') ?>
+<?php $comps = Data::get('components') ?>
+
+
+<!-- container -->
+<div class="container">
+
+    <?php Layout::setSubViewContainer('titlecontainer'); ?>
+
+            <p><b>The ArmoredCore (API) has loaded the following components:</b></p>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                <th>Component Name</th><th>Runtime Object Class name</th><th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+            <?php foreach($comps as $key => $value){?>
+                <tr>
+                    <td scope="row"><?= $key ?></td><td><?= get_class($value)?></td><td><a href="<?=Url::toRoute('devtools/inspect', $key)?>" class="btn btn-info" role="button">Inspect</a></td>
+                </tr>
+            <?php } ?>
+                </tbody>
+            </table>
+
+
+
+
+        </article>
+        <!-- /Article -->
+
+        <!-- Sidebar -->
+        <aside class="col-md-4 sidebar sidebar-right">
+
+            <div class="row widget">
+                <div class="col-xs-12">
+                    <h4>Lorem ipsum dolor sit</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ratione delectus reiciendis nulla nisi pariatur molestias animi eos repellat? Vel.</p>
+                </div>
+            </div>
+            <div class="row widget">
+                <div class="col-xs-12">
+                    <h4>Lorem ipsum dolor sit</h4>
+                    <p><img src="assets/images/1.jpg" alt=""></p>
+                </div>
+            </div>
+            <div class="row widget">
+                <div class="col-xs-12">
+                    <h4>Lorem ipsum dolor sit</h4>
+                    <p><img src="assets/images/2.jpg" alt=""></p>
+                    <p>Qui, debitis, ad, neque reprehenderit laborum soluta dolor voluptate eligendi enim consequuntur eveniet recusandae rerum? Atque eos corporis provident tenetur.</p>
+                </div>
+            </div>
+
+        </aside>
+        <!-- /Sidebar -->
+
+    </div>
+</div>	<!-- /container -->
+
+<?php Layout::includeLayout('footer') ?>

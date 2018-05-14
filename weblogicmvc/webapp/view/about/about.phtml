@@ -1,0 +1,60 @@
+<?php
+use ArmoredCore\WebObjects\Asset;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\URL;
+Layout::includeLayout('indexheader'); ?>
+
+    <!-- Header -->
+    <header id="head">
+        <div class="container">
+            <div class="row">
+                <h1 class="lead"><b>WEBlogic Studio</b><br><small><b>Armored</b>Core v0.85</small><br>MVC Reference Framework</h1>
+                <p class="tagline">Developing better Apps. Creating better professionals.</p>
+            </div>
+        </div>
+    </header>
+    <!-- /Header -->
+
+
+    <!-- Intro -->
+    <div class="container text-center">
+        <br>
+        <img width="25%" height="25%" src="<?=Asset::image('416x416.jpg')?>">
+        <h2 class="thin">Learn Here . . . Work Everywhere.</h2>
+        <br>
+        <p class="text-muted">
+            Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
+        </p>
+        <h2 class="thin">Learn Today . . . Lead Tomorrow.</h2>
+
+    </div>
+    <!-- /Intro-->
+
+    <div class="jumbotron top-space">
+        <h5><span class="glyphicon glyphicon-cog">&nbsp;</span><strong>Armored Core Now Includes: </strong>
+            PSR-7 HTTP Messaging, PSR-11 Containers for IOC, PSR-15 HTTP Middleware and PSR-17 HTTP Factories
+        </h5>
+    </div>
+
+    </div>
+
+
+    <div class="container text-center">
+
+        <h2>TeSP Programação de Sistemas de Informação</h2>
+        <h3>Programação Web - Servidor</h3>
+        <br>
+        <p class="text-muted">
+            Nome: Diogo Alpendre
+        </p>
+        <p class="text-muted">
+            Nº de Estudante: 2170324
+        </p>
+
+        <img width="25%" height="25%" src="<?=Asset::image('416x416.jpg')?>"><h4 class="thin">Departamento de Engenharia Informática - Escola Superior de Tecnologia e Gestão - Instituto Politécnico de Leiria</h4>
+
+    </div>
+
+
+
+<?php Layout::includeLayout('footer')?>

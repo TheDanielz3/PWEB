@@ -1,0 +1,57 @@
+<?php use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\ErrMgr;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\URL;
+
+Layout::includeLayout('header') ?>
+<?php $book = Data::get('book')?>
+<?php ErrMgr::attach($book) ?>
+
+
+	<!-- container -->
+	<div class="container">
+
+		<div class="row">
+			
+			<!-- Article main content -->
+			<article class="col-xs-12 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">New Book</h1>
+				</header>
+				
+				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<hr>
+							<form method="post" action="<?=Url::toRoute('book/store')?>">
+								<div class="top-margin">
+									<label>Name <span class="text-danger">*</span></label>
+									<input type="text" value="<?=$book->name?>" name="name" class="form-control" placeholder="Enter book name">
+                                    <?= ErrMgr::bind('name') ?>
+
+								</div>
+								<div class="top-margin">
+									<label>ISBN <span class="text-danger">*</span></label>
+									<input type="text" value="<?=$book->isbn?>" name="isbn" class="form-control" placeholder="Enter ISBN">
+                                    <?= ErrMgr::bind('isbn') ?>
+                                </div>
+
+								<hr>
+
+									<div class="col-lg-4 text-right">
+										<button class="btn btn-action" type="submit">New</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+				
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+
+<?php Layout::includeLayout('footer') ?>

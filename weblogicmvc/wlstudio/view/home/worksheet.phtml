@@ -1,0 +1,67 @@
+<?php use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\URL;
+
+Layout::includeLayout('header') ?>
+
+<!-- container -->
+<div class="container">
+
+    <?php Layout::setSubViewContainer('titlecontainer'); ?>
+
+            <p>Use this view as your worksheet</p>
+
+
+            <h3>Use this space to echo your test models</h3>
+
+            <pre><code class="nohighlight">
+Put your stuff here
+
+<a href="<?= Url::toRoute('book/index')?>"> My link to BookController </a>
+
+
+<a href="<?= Url::toRoute('home/setsession') ?>">Put Object in session.</a><br>
+<a href="<?= Url::toRoute('home/showsession') ?>">Show Object in session.</a><br>
+<a href="<?= Url::toRoute('home/destroysession') ?>">Destroy session.</a><br>
+
+                    <a href="<?= Url::toRoute('F1/index') ?>">Go to F1 BeanController.</a><br>
+
+
+
+
+                </code></pre>
+
+            <p>Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
+
+        </article>
+        <!-- /Article -->
+
+        <!-- Sidebar -->
+        <aside class="col-md-4 sidebar sidebar-right">
+
+            <div class="row widget">
+                <div class="col-xs-12">
+                    <h4>Use this space to create a set of links (menu)</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ratione delectus reiciendis nulla nisi pariatur molestias animi eos repellat? Vel.</p>
+                </div>
+            </div>
+            <div class="row widget">
+                <div class="col-xs-12">
+                    <h4>Lorem ipsum dolor sit</h4>
+                    <p><img src="assets/images/1.jpg" alt=""></p>
+                </div>
+            </div>
+            <div class="row widget">
+                <div class="col-xs-12">
+                    <h4>Lorem ipsum dolor sit</h4>
+                    <p><img src="assets/images/2.jpg" alt=""></p>
+                    <p>Qui, debitis, ad, neque reprehenderit laborum soluta dolor voluptate eligendi enim consequuntur eveniet recusandae rerum? Atque eos corporis provident tenetur.</p>
+                </div>
+            </div>
+
+        </aside>
+        <!-- /Sidebar -->
+
+    </div>
+</div>	<!-- /container -->
+
+<?php Layout::includeLayout('footer') ?>

@@ -1,0 +1,45 @@
+<?php use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\Layout;
+
+Layout::includeLayout('header');
+
+$plano = Data::get('plano'); ?>
+
+    <html>
+    <head>
+        <title>Ficha 4 vista plano</title>
+    </head>
+    <body>
+    <?php
+
+
+
+    echo '<table>';
+    echo '<tr>';
+    echo '<th class="cor">Nº Prest</th>';
+    echo '<th class="cor">Data</th>';
+    echo '<th class="cor">Valor Prest.</th>';
+    echo '<th class="cor">Dia Semana</th>';
+    echo '<th class="cor">Valor em Dívida</th>';
+    echo '</tr>';
+
+    for ($linha = 0; $linha < count($plano); $linha++) {
+
+        echo '<tr>';
+        echo '<td class="cor">' . ($linha + 1) . '</td>';
+        echo '<td>' . $plano[$linha][0] . '</td>';
+        echo '<td>' . $plano[$linha][1] . '</td>';
+        echo '<td>' . $plano[$linha][2]  . '</td>';
+
+        echo '<td>' . $plano[$linha][3] . '</td>';
+        echo '</tr>';
+
+    }
+
+
+    echo '</table><br><br>';
+
+    ?>
+    </body>
+    </html>
+<?php Layout::includeLayout('header');?>

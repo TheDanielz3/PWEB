@@ -1,0 +1,65 @@
+<?php use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\ErrMgr;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\URL;
+
+Layout::includeLayout('header') ?>
+<?php $book = Data::get('book') ?>
+<?php ErrMgr::attach($book) ?>
+
+	<!-- container -->
+	<div class="container">
+
+		<div class="row">
+			
+			<!-- Article main content -->
+			<article class="col-xs-12 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Edit Book</h1>
+				</header>
+				
+
+					<div class="panel panel-default">
+						<div class="panel-body">
+
+                            <hr>
+
+
+							<form class="form-horizontal" method="post" action="<?=Url::toRoute('book/update', $book->id)?>">
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="name">Name:<span class="text-danger">*</span></label>
+                                    <div class="col-sm-6">
+                                        <input type="text" value="<?=$book->name?>" class="form-control" required name="name" placeholder="Enter book name">
+                                        <?= ErrMgr::bind('name') ?>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="name">ISBN:<span class="text-danger">*</span></label>
+                                    <div class="col-sm-6">
+                                        <input type="text" required value="<?=$book->isbn?>" class="form-control" name="isbn" placeholder="Enter ISBN">
+                                        <?= ErrMgr::bind('isbn') ?>
+                                    </div>
+                                </div>
+
+
+								<hr>
+
+									<div class="col-lg-4 text-right">
+										<button class="btn btn-default" type="submit">Save</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+
+				
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+
+<?php Layout::includeLayout('footer') ?>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/vendor/php-activerecord/test/models" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Aura/Di" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Aura/Filter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Aura/Includer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Dave1010/Hug" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Filisko/PDOplus" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Hoa/Consistency" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Hoa/Event" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Hoa/Exception" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Hoa/Protocol" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Hoa/Socket" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Hoa/Websocket" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Kdyby/Extension" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Netpromotion/Profiler" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Nette/Iterators" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Nette/PhpGenerator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Nette/Utils" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Pd/Diagnostics" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PetrKnap/Php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Psr/Cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Psr/Container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Psr/Http" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Psr/Hug" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Psr/Interop" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Psr/Log" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Stolz/Assets" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Symfony/Component" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Tracy/Bridges" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Tracy/assets" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Windwalker/Cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Windwalker/edge" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Windwalker/http" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Windwalker/loader" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Windwalker/renderer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Windwalker/structure" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/Windwalker/uri" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/legacy/Haanga" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/php-activerecord/examples" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/php-activerecord/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/php-activerecord/test" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpFastCache/Bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpFastCache/Cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpFastCache/Core" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpFastCache/Drivers" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpFastCache/Entities" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpFastCache/Exceptions" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpFastCache/Proxy" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpFastCache/Util" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-diactoros" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
