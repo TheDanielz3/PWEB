@@ -1,0 +1,9 @@
+{
+    "require": {
+        "zendframework/zend-diactoros": "^1.4",
+        "windwalker/renderer": "^3.1",
+        "windwalker/http": "^3.1",
+        "windwalker/edge": "^3.1",
+        "windwalker/loader": "^3.1"
+    }
+}

@@ -1,0 +1,26 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: smendes
+ * Date: 19-04-2017
+ * Time: 18:57
+ */
+
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\URL;
+?>
+
+<?=Layout::includeLayout('header')?>
+
+<div>
+    <br>
+    Introduza os dados para o financiamento<br>
+    <form method="post" action="<?= URL::toRoute('plano/show') ?>">
+        <input type="text" name = "credito" class="form-control" placeholder="Valor de crédito">
+        <input type="text" name = "numprest" class="form-control" placeholder="Número de prestações">
+        <input type="submit" value="OK">
+    </form>
+</div>
+
+
+<?=Layout::includeLayout('footer')?>

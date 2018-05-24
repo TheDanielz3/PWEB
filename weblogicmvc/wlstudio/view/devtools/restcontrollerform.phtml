@@ -1,0 +1,71 @@
+<?php use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\URL;
+
+Layout::includeLayout('header') ?>
+<?php $modelNames = Data::get('modelnames') ?>
+<?php $controllerNames = Data::get('controllernames') ?>
+
+<!-- container -->
+<div class="container">
+
+    <?php Layout::setSubViewContainer('titlecontainer'); ?>
+
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p class="text-left text-muted"><b>Controller Name: </b><small><i>The name of the controller you are generating. Convention is modelnameController. Ex: BookController<br>
+                                </i></small><br><b>Model Name: </b><small><i>The name of the model you want to use as a CRUD resource.</i></small></p>
+                        <hr>
+                        <h3 class="thin text-center">Currently you have the following controllers:</h3>
+
+                        <?php foreach ($controllerNames as $controller){ ?>
+                            <pre><code class="nohighlight"><?=$controller?></code></pre>
+                        <?php } ?>
+
+                        <h3 class="thin text-center">Please provide the following information:</h3>
+                        <form>
+                            <div class="top-margin">
+                                <label>Controller Name <small><i>(The name of your controller. ex: BookController)</i></small><span class="text-danger">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="top-margin">
+                                <label>Model Class Name <small><i>(The name of the model you want to use.)</i></small><span class="text-danger">*</span></label>
+                                <select class="form-control">
+                                <?php foreach ($modelNames as $model){ ?>
+                                    <option value="<?=$model?>"><?=$model?></option>
+                                <?php } ?>
+
+                                </select>
+
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-lg-8">
+
+                                </div>
+                                <div class="col-lg-4 text-right">
+                                    <button class="btn btn-action" type="submit">Generate</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+        <!-- /Article -->
+
+        <form method="post" action="<?=Url::toRoute('devtools/restcontrollerform')?>">
+
+
+        </form>
+    </div>
+
+</div>
+
+<?php Layout::includeLayout('footer') ?>

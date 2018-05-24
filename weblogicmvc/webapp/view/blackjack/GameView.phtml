@@ -1,0 +1,56 @@
+<?php
+    /*use ArmoredCore\WebObjects\URL;
+    use ArmoredCore\WebObjects\Layout;
+    use ArmoredCore\WebObjects\View;*/
+    use ArmoredCore\WebObjects\Data;
+    use ArmoredCore\WebObjects\URL;
+
+    $context = Data::get('context');
+?>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <?php        //introduzir o valor da aposta
+            if($context->getGameState() == 'Bet')
+            {
+                ?>
+                    <form method="post" action="<?= URL::toRoute('blackjack/PostBet')?>">
+                        <input type="number" value="BetValue">
+                        <input type="submit" value="Bet" name="BetInput">
+                    </form>
+
+                <?php
+
+            }
+            echo "<h1>Server Hand</h1>";
+            $hand = $context->getServerHand();
+            if(!is_null($hand))
+            {
+                echo $hand->getHand()[0];
+            }
+
+            echo "<br/><br/>";
+
+            echo "<h1>Player Hand</h1>";
+            $hand = $context->getPlayerHand();
+            if(!is_null($hand))
+            {
+                foreach($hand->getHand() as $h)
+                echo $h . '  ';
+            }
+
+        ?>
+        <?php
+        if($context->getGameState() == 'Hit') {
+            ?>
+
+
+            <?php
+        }
+        ?>
+    </body>
+</html>

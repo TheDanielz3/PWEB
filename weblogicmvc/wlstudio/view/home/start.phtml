@@ -1,0 +1,140 @@
+<?php
+use ArmoredCore\WebObjects\Asset;
+use ArmoredCore\WebObjects\Layout;
+
+Layout::includeLayout('header');
+
+?>
+
+<!-- container -->
+<div class="container">
+
+
+            <?php Layout::setSubViewContainer('titlecontainer'); ?>
+
+
+            <h2>WeblogicMVC Building Blocks</h2>
+            <p>Please recall the basics.</p>
+
+            <img class="img-responsive" src="<?=Asset::image('weblogicmvcbldblocks.png') ?>">
+
+            <h2>WeblogicMVC Folder Structure</h2>
+
+            <p>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success"><b>weblogicmvc/</b> (root folder)<ul class="list-group">
+                        <li class="list-group-item">database/</li>
+                        <li class="list-group-item">framework/</li>
+                        <li class="list-group-item">lang/</li>
+                        <li class="list-group-item">middleware/</li>
+                        <li class="list-group-item list-group-item-warning"><b>public/</b><ul class="list-group">
+                                <li class="list-group-item">css/</li>
+                                <li class="list-group-item">js/</li>
+                                <li class="list-group-item">images/</li>
+                                <li class="list-group-item">fonts/</li>
+                            </ul></li>
+                        <li class="list-group-item">storage/</li>
+                        <li class="list-group-item">vendor/</li>
+                        <li class="list-group-item list-group-item-warning"><b>webapp/</b> (webapp root folder)<ul class="list-group">
+                                <li class="list-group-item list-group-item-danger"><b>controller</b>/</li>
+                                <li class="list-group-item list-group-item-danger"><b>model/</b></li>
+                                <li class="list-group-item list-group-item-danger"><b>view/</b></li>
+                                <li class="list-group-item">startup/</li>
+                                <li class="list-group-item">log/</li>
+                                <li class="list-group-item">filters/</li>
+                                <li class="list-group-item list-group-item-danger"><b>router.php</b></li></li>
+
+                        </ul>
+                    </ul></li>
+
+            </ul>
+
+
+            </p>
+
+            <hr>
+            <h2>Let's start easy.</h2>
+            <p>Click the SIGN IN /SIGN UP button in the upper menu and then come back to this page.</p>
+            <p>So it appears to be broken. Let's fix it.</p>
+
+            <p>Since we have a controller called <code>HomeController</code> class, let's use it to create an action method to show the SIGN IN /SIGN UP page.</p>
+            <p><span class="label label-primary">Task:</span> Locate the <code>HomeController</code> class in the controller folder and open it in your editor. Scan the code.<br>
+                    There are 2 methods: 1 for the <code>index</code> (default) page and one for the page you are reading (<code>start</code>).</p>
+
+            <h2>1. The Controller</h2>
+
+            <pre><code>class HomeController extends BaseController
+{
+    public function index(){
+        View::make('home.index');
+    }
+
+    public function start(){
+        View::make('home.start');
+    }
+}</code></pre>
+
+            <p><span class="label label-primary">Task:</span> Add a method called <code>'login'</code> to the <code>'HomeController'</code> Class and return a view called <code>'home.login'</code>.
+                <br><br></br><b>REMEMBER: Methods in controllers are known as 'Action Methods'</b></p>
+
+            <br>
+            <p>The view that we need also exists. Let's use it as the SIGN IN /SIGN UP form page. The view name is 'home.login' which means that you can find it in the 'home' subfolder of the 'view' folder.</p>
+            <p><span class="label label-primary">Task:</span> Locate the view login.tpl.php in the view folder and open it in your editor.</p>
+            <hr>
+            <h2>2. The View</h2>
+            <h3> PHP Code Head Block</h3>
+            <pre><code>Layout::includeLayout('header');</code></pre>
+            <p>We are using a HTML header template (found in <code>'view/layout'</code> folder).</p>
+            <h3> HTML 5 Code Blocks</h3>
+            <pre><code = "html">The HTML 5 goes here!</pre></code>
+            <h3> PHP Code Footer Block</h3>
+            <pre><code>Layout::includeLayout('footer');</code></pre>
+            <p>We are using a HTML footer template (found in <code>'view/layout'</code> folder).</p>
+            <hr>
+            <h2>3. The Route</h2>
+            <p> Lets create a route to the action method we created in the controller.</p>
+
+            <pre><code>Router::get('home@login','HomeController@login');</pre></code>
+            <p><span class="label label-primary">Task:</span> Find the <code>'router.php'</code> file and open it in your editor. Add the routing rule to the router.</p>
+            <hr>
+            <h2>4. Setting the link to the route</h2>
+
+            <p> The SIGN IN Link can be found in the <code>'header.layout.php'</code> template.</p><p>Lets use the <code>'Url'</code> Object to generate a URL to our route.</p>
+            <pre><code>URL::toRoute('home@login')</code></pre>
+            <p><span class="label label-primary">Task:</span> Set the link <code>href</code> attribute to our newly created route.</p>
+
+
+
+        </article>
+        <!-- /Article -->
+
+        <!-- Sidebar -->
+        <aside class="col-md-4 sidebar sidebar-right">
+
+            <div class="row widget">
+                <div class="col-xs-12">
+                    <p>The MVC elements can be created in any order. This is the recommended order.</p>
+                    <h4>1. Create an action method</h4>
+                    <p>Locate your controller an create an action method in it.</p>
+                </div>
+            </div>
+            <div class="row widget">
+                <div class="col-xs-12">
+                    <h4>2. Create a view</h4>
+                    <p><img class="img-thumbnail" src="<?=Asset::Image('uxlibrary.jpg')?>" alt="">Create a HTML 5 View</p>
+                </div>
+            </div>
+            <div class="row widget">
+                <div class="col-xs-12">
+                    <h4>3. Create the route</h4>
+                    <p><img class="img-thumbnail" src="<?=Asset::Image('responsive.jpg')?>" alt=""></p>
+                    <p>Locate your <code>'router.php'</code> file. Add the route for your newly created action method</p>
+                </div>
+            </div>
+
+        </aside>
+        <!-- /Sidebar -->
+
+</div>	<!-- /container -->
+
+<?php Layout::includeLayout('footer') ?>

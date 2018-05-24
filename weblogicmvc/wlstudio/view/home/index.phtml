@@ -1,0 +1,190 @@
+<?php
+use ArmoredCore\WebObjects\Asset;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\URL;
+Layout::includeLayout('indexheader'); ?>
+
+    <!-- Header -->
+    <header id="head">
+        <div class="container">
+            <div class="row">
+                <h1 class="lead"><b>WEBlogic Studio</b><br><small><b>Armored</b>Core v0.85</small><br>MVC Reference Framework</h1>
+                <p class="tagline">Developing better Apps. Creating better professionals.</p>
+                <p><a class="btn btn-action btn-lg" role="button" href="<?= Url::toRoute('home/start')?>">START NOW</a></p>
+                <p class="small">By<i> Sílvio Priem Mendes, PhD</i></p>
+            </div>
+        </div>
+    </header>
+    <!-- /Header -->
+
+
+    <!-- Intro -->
+    <div class="container text-center">
+        <br>
+        <img width="25%" height="25%" src="<?=Asset::image('weblogos-small.png')?>">
+        <h2 class="thin">Learn Here . . . Work Everywhere.</h2>
+        <br>
+        <p class="text-muted">
+            Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
+        </p>
+        <h2 class="thin">Learn Today . . . Lead Tomorrow.</h2>
+
+    </div>
+    <!-- /Intro-->
+
+    <div class="jumbotron top-space">
+        <h5><span class="glyphicon glyphicon-cog">&nbsp;</span><strong>Armored Core Now Includes: </strong>
+        PSR-7 HTTP Messaging, PSR-11 Containers for IOC, PSR-15 HTTP Middleware and PSR-17 HTTP Factories
+        </h5>
+    </div>
+
+    </div>
+
+    <!-- Highlights - jumbotron -->
+    <div class="jumbotron top-space">
+        <div class="container">
+            <h3 class="text-center thin">WHAT YOU GET</h3>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>Clean Web Objects for learners</h4></div>
+                    <div class="h-body text-center">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><i class="fa fa-flash fa-5"></i>Fat-free</h4></div>
+                    <div class="h-body text-center">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>High Quality Industry Standards and Best Practices</h4></div>
+                    <div class="h-body text-center">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>Learn here Work everywhere</h4></div>
+                    <div class="h-body text-center">
+                        <p></p>
+                    </div>
+                </div>
+            </div> <!-- /row  -->
+
+        </div>
+    </div>
+    <!-- /Highlights -->
+
+    <!-- container -->
+    <div class="container">
+
+        <h2 class="text-center top-space">We've got you covered</h2>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h3><span class="glyphicon glyphicon-certificate">&nbsp;</span>Clean Slim Code</h3>
+
+                <br>
+                <p>The code shows the controller and action method of this page.</p>
+                <pre><code>class HomeController extends BaseController
+{
+    public function index(){
+        View::make('home.index');
+    }
+}</code></pre>
+
+            </div>
+            <div class="col-sm-6">
+                <h3><span class="glyphicon glyphicon-search">&nbsp;</span>Autoloading</h3>
+                <br>
+                <p>Autoloaders remove the complexity of including files by mapping namespaces to file system paths.</p>
+                <pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">use</span> <span class="nx">Vendor\Package\ClassName</span><span class="p">;</span>
+
+<span class="nv">$object</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ClassName</span><span class="p">();</span>
+</code></pre>
+
+                <a href="http://www.php-fig.org/psr/psr-4/" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-search"></span> PSR-4: Improved Autoloading
+                </a>&nbsp;<span class="label label-warning">* External Link</span>
+
+            </div>
+        </div> <!-- /row -->
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h3><span class="glyphicon glyphicon-cog">&nbsp;</span>Interfaces</h3>
+                <p>Interfaces simplify the sharing of code between projects by following expected contracts.</p>
+
+
+                <pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Psr\Log</span><span class="p">;</span>
+
+<span class="sd">/**
+ * Describes a logger instance
+ */</span>
+<span class="k">interface</span> <span class="nx">LoggerInterface</span>
+<span class="p">{</span>
+</code></pre>
+
+
+                <a href="http://www.php-fig.org/psr/psr-3/" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-cog"></span> PSR-3: Logger Interface
+                </a>&nbsp;<span class="label label-warning">* External Link</span><br><br>
+                <a href="http://www.php-fig.org/psr/psr-6/" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-cog"></span> PSR-6: Caching Interface
+                </a>&nbsp;<span class="label label-warning">* External Link</span><br><br>
+                <a href="http://www.php-fig.org/psr/psr-7/" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-cog"></span> PSR-7: HTTP Message Interfaces
+                </a>&nbsp;<span class="label label-warning">* External Link</span>
+
+            </div>
+            <div class="col-sm-6">
+                <h3><span class="glyphicon glyphicon-list-alt">&nbsp;</span>Coding Styles</h3>
+                <p>Standardized formatting reduces the cognitive friction when reading code from other authors. It comprises what should be considered the standard coding elements that are required to ensure a high level of technical interoperability between shared PHP code.</p>
+                <pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">ClassName</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">fooBarBaz</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="o">&amp;</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span> <span class="o">=</span> <span class="p">[])</span>
+    <span class="p">{</span>
+        <span class="c1">// method body
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+                <a href="http://www.php-fig.org/psr/psr-1/" class="btn btn-default btn-xs">
+                    <span class="glyphicon glyphicon-asterisk"></span> PSR-1: Basic Coding Standard
+                </a>&nbsp;<span class="label label-warning">* External Link</span><br><br>
+                <a href="http://www.php-fig.org/psr/psr-2/" class="btn btn-default btn-xs">
+                    <span class="glyphicon glyphicon-asterisk"></span> PSR-2: Coding Style Guide
+                </a>&nbsp;<span class="label label-warning">* External Link</span>
+
+            </div>
+        </div> <!-- /row -->
+
+        <div class="jumbotron top-space">
+            <h4><strong>Model–View–Controller (MVC)</strong> is a software architectural pattern for creating apps. It divides a given application into three interconnected parts in order to separate internal representations of information from the ways that information is presented to and accepted from the user. The MVC design pattern decouples these major components allowing for efficient code reuse and parallel development.</h4>
+            <h4>Advantages</h4>
+                <h5>
+                    <ul>
+                        <li><strong>Simultaneous development</strong> - Multiple developers can work simultaneously on the model, controller and views.</li>
+                        <li><strong>High cohesion</strong> - MVC enables logical grouping of related actions on a controller together. The views for a specific model are also grouped together.</li>
+                        <li><strong>Low coupling</strong> - The very nature of the MVC framework is such that there is low coupling among models, views or controllers</li>
+                        <li><strong>Ease of modification</strong> - Because of the separation of responsibilities, future development or modification is easier</li></h5>
+            <h4>Disadvantages</h4>
+            <h5>
+                <ul>
+                    <li><strong>Pronounced learning curve</strong> - Knowledge on multiple technologies becomes the norm. Developers using MVC need to be skilled in multiple technologies.</li>
+                    <li><strong>Code navigability</strong> - The framework navigation can be complex, hence it introduces new layers of abstractions and requires users to adapt its decomposition criteria to MVC.</li>
+                    </h5>
+            <p class="text-right"><a class="btn btn-primary btn-large">Learn more »</a></p>
+        </div>
+
+</div>	<!-- /container -->
+
+<?php Layout::includeLayout('footer')?>
