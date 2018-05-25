@@ -13,6 +13,23 @@ class BlackJackContext
     private $playerHand;
     private $ServerHand;
     private $bet;
+    private $gameState;
+
+    /**
+     * @return mixed
+     */
+    public function getGameState()
+    {
+        return $this->gameState;
+    }
+
+    /**
+     * @param mixed $gameState
+     */
+    public function setGameState($gameState)
+    {
+        $this->gameState = $gameState;
+    }
 
 
     /**

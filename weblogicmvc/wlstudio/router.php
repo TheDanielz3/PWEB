@@ -20,9 +20,6 @@ Router::get('home/index','HomeController/index');
 Router::get('plano/index','PlanoController/index');
 Router::post('plano/show','PlanoController/show');
 
-
-
-
 Router::get('home/start','HomeController/start');
 Router::get('home/login','HomeController/login');
 Router::get('home/worksheet','HomeController/worksheet');
@@ -39,13 +36,6 @@ Router::get('F1/index','F1Controller/index');
 
 Router::resource('book', 'BookController');
 
-
-
-
-
-
-
-
-
+Router::resource('user', 'UserController');
 
 /************** End of URLEncoder Routing Rules ************************************/

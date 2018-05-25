@@ -20,8 +20,11 @@ Router::get('home/about','HomeController/about');
 Router::get('about/index', 'AboutController/index');
 Router::get('calculadora/index', 'PlanoController/index');
 Router::post('calculadora/show', 'PlanoController/show');
-
-Router::resource('user', 'UserController');
-
+Router::resource('user/index', 'UserController/index');
+//Router::resource('user', 'UserController');
+Router::get('test/index', 'CardTestController/index');
+Router::get('blackjack/Bet', 'BlackjackController/Bet');
+Router::post('blackjack/PostBet', 'BlackjackController/PostBet');
+Router::get('blackjack/GameView', 'BlackjackController/Bet');
 
 /************** End of URLEncoder Routing Rules ************************************/
