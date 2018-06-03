@@ -17,12 +17,12 @@ class LoginController
 
     public function doLogin()
     {
-        return View::make('blackjack.login');
+        return View::make('user.login');
     }
 
     public function register()
     {
-        return View::make('blackjack.createuser');
+        return View::make('user.create');
     }
 
     public function store()
@@ -30,3 +30,5 @@ class LoginController
         return View::make('');
     }
 }
+
+

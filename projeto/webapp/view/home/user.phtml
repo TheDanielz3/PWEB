@@ -1,0 +1,111 @@
+<?php use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\Asset;
+use ArmoredCore\WebObjects\URL;
+use ArmoredCore\WebObjects\Session;
+
+Layout::includeLayout('gameheader') ?>
+<!DOCTYPE html>
+<?php
+
+$user = Session::get('user');
+$currentaccounts = Data::get('currentaccount');
+$userSession = Session::get('user');
+
+
+?>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body >
+<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-default">
+        <div class="panel-body">
+
+            <h2><b><?php echo $user->username?></b></h2>
+            <hr>
+
+            <form action="<?= Url::toRoute('user/change', $user->id) ?>" method="POST">
+
+                <div class="top-margin">
+                    <label>Username <span class="text-danger"></span></label>
+                    <input readonly="true" type="text" value="<?=$user->username?>" name="username" class="form-control">
+                </div>
+                <div class="top-margin">
+                    <label>Nome <span class="text-danger"></span></label>
+                    <input type="text" value="<?=$user->nome?>" name="nome" class="form-control">
+                    <div class="top-margin">
+                        <label>Apelido <span class="text-danger"></span></label>
+                        <input type="text" value="<?=$user->apelido?>" name="apelido" class="form-control">
+                    </div>
+                    <div class="top-margin">
+                        <label>Email <span class="text-danger"></span></label>
+                        <input type="text" value="<?=$user->email?>" name="email" class="form-control">
+                    </div>
+                    <div class="top-margin">
+                        <label>Password<span class="text-danger"></span></label>
+                        <input type="password" value="<?=$user->password?>" name="password" class="form-control">
+                    </div>
+
+
+                    <hr>
+                    <div class="col-lg-4 text-left">
+                        <input class="btn btn-action" type="submit" value="Guardar">
+
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="panel-body">
+
+            <form action="<?= Url::toRoute('user/charge', $user->id) ?>" method="POST">
+                <hr>
+                <h2><b>Carregamento: 1€ = 4 creditos</b></h2>
+
+                <div class="top-margin">
+                    <label>Valor: <span class="text-danger"></span></label>
+                    <input type="text" name="credito" class="form-control">
+                </div>
+                <hr>
+                    <div class="col-lg-4 text-left">
+
+                        <input class="btn btn-action" type="submit" value="Carregar">
+
+                    </div>
+
+            </form>
+        </div>
+
+        <table class="table table-striped"><thead><th><h3>Tipo</h3></th><th><h3>Descriçao</h3></th><th><h3>Crédito</h3></th><th><h3>Débito</h3></th><th><h3>Saldo</h3></th><th></thead>
+            <body>
+            <?php foreach ($currentaccounts as $currentaccount) { ?>
+                <?php if ($currentaccount->id_username == $userSession->id ){ ?>
+                <tr>
+                    <td><?=$currentaccount->tipo?></td>
+                    <td><?=$currentaccount->descricao?></td>
+                    <td><?=$currentaccount->credito?></td>
+                    <td><?=$currentaccount->debito?></td>
+                    <td><?=$currentaccount->saldo?></td>
+
+
+                </tr>
+                <?php } ?>
+            <?php } ?>
+
+            </body>
+
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
+

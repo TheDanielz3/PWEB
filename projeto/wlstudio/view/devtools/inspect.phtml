@@ -1,0 +1,17 @@
+<?php
+    use ArmoredCore\WebObjects\Data;
+    use ArmoredCore\WebObjects\Layout;
+    Layout::includeLayout('header');
+    $instance = Data::get('instance')
+?>
+
+<!-- container -->
+<?php Layout::setSubViewContainer('titlecontainer'); ?>
+
+    <div class="row">
+        <pre><code><?php var_dump($instance)?></code></pre>
+    </div>
+
+
+</div>
+<?php Layout::includeLayout('footer') ?>

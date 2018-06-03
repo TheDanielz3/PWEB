@@ -1,0 +1,69 @@
+<?php use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\Asset;
+use ArmoredCore\WebObjects\URL;
+use ArmoredCore\WebObjects\Session;
+
+Layout::includeLayout('gameheader') ?>
+<?php $user = Data::get('user');
+
+$user = Session::get('user');
+$currentaccounts = Data::get('currentaccount');
+$userSession = Session::get('user');?>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #toptabel {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 40%;
+
+        }
+
+        #toptabel td, #toptabel th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #toptabel tr:nth-child(even){background-color: #f2f2f2;}
+
+        #toptabel tr:hover {background-color: #ddd;}
+
+        #toptabel th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<table id="toptabel" align="center">
+    <tr>
+        <h4><th>Username</th></h4>
+        <h4><th>Creditos</th></h4>
+    </tr>
+
+
+    <?php
+    foreach ($currentaccounts as $currentaccount) {
+            ?>
+                <tr>
+                    <td><?= $currentaccount->id_username ?></td>
+                    <td><?= $currentaccount->credito ?></td>
+
+                </tr>
+            <?php
+
+    }?>
+
+    </tr>
+
+
+</table>
+
+</body>
+</html>
+}

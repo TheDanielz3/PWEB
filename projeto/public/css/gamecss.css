@@ -1,0 +1,119 @@
+.game{
+    background: url('../../img/backgroundgame2.png') no-repeat center center ;
+
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    max-width: 1920px;
+    max-height: 1000px;
+
+
+
+}
+.image{
+    padding-left: 1%;
+    width:8.3%;
+}
+.bet{
+
+    margin-top:  1.1%;
+    margin-bottom: 7.5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border: none;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+
+
+}
+
+.button1{
+    background-color: green;
+    margin-top: -100%;
+    margin-left: -2%;
+    border: none;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:140%;
+    border-radius: 20%;
+}
+.button2{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:140%;
+    border-radius: 20%;
+}
+.button3{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:140%;
+    border-radius: 20%;
+ }
+.button5{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:140%;
+    border-radius: 20%;
+}
+.button10{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:140%;
+    border-radius: 20%;
+}
+.button25{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:140%;
+    border-radius: 20%;
+}
+.button_bet{
+
+    background-color: green;
+    margin-top: 10%;
+    margin-left: 0%;
+    border: none;
+    color: white;
+    padding: 9%;
+    text-align: center;
+    text-decoration: none;
+
+    display: inline-block;
+    font-size:140%;
+    border-radius: 20%;
+
+
+}

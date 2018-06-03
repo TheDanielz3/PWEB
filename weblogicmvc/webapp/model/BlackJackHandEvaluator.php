@@ -1,5 +1,11 @@
 <?php
 
+
+use ArmoredCore\Controllers\BaseController;
+use ArmoredCore\WebObjects\Redirect;
+use ArmoredCore\WebObjects\Session;
+use ArmoredCore\WebObjects\View;
+use ArmoredCore\WebObjects\Post;
 /**
  * Created by PhpStorm.
  * User: smendes
@@ -11,8 +17,20 @@ class BlackJackHandEvaluator
 
     public function evaluateHand(Hand $hand ){
 
-        // calcular os pontos numa mão
-        //
+        $FinalValue = 21;
+        foreach ($hand->getHand() as $h)
+        {
+
+            $num = substr($h,1);
+
+
+
+            Tracy\Debugger::barDump($num,'num');
+
+        }
+
+
+
 
 
     }

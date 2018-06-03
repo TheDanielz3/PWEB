@@ -1,0 +1,6 @@
+user com permissoes admin: 
+	username: admin 
+	password: admin1
+user com permissoes normais:
+	username: leonardorosa1
+	password: leonardorosa

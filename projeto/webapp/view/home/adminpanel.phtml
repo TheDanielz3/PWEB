@@ -1,0 +1,60 @@
+<?php use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\Asset;
+use ArmoredCore\WebObjects\URL;
+use ArmoredCore\WebObjects\Session;
+Layout::includeLayout('gameheader') ?>
+<?php
+$users = Data::get('user');
+$userAuth = Session::get('user');
+if($userAuth->type == "admin"){
+?>
+
+    <!-- container -->
+    <div class="container">
+
+        <h2 class="text-left top-space">Admin Panel</h2>
+        <h2 class="top-space"></h2>
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-striped"><thead><th><h3>Id</h3></th><th><h3>Username</h3></th><th><h3>Nome</h3></th><th><h3>Apelido</h3></th><th><h3>Email</h3></th><th><h3>Password</h3></th><th><h3>Tipo</h3></th></thead>
+                    <body>
+                    <?php foreach ($users as $user) { ?>
+                        <tr>
+                            <td><?=$user->id?></td>
+                            <td><?=$user->username?></td>
+                            <td><?=$user->nome?></td>
+                            <td><?=$user->apelido?></td>
+                            <td><?=$user->email?></td>
+                            <td><?=$user->password?></td>
+                            <td><?=$user->type?></td>
+
+
+
+                            <td>
+                                <a href="<?=Url::toRoute('user/show', $user->id)?>" class="btn btn-info" role="button">Show</a>
+                                <?php if($user->block == 1){ ?>
+
+                                <a href="<?=Url::toRoute('user/unblock', $user->id)?>" class="btn btn-warning" role="button">Unblock</a>
+                                <?php }if($user->block == 0){ ?>
+                                    <a href="<?=Url::toRoute('user/block', $user->id)?>" class="btn btn-warning" role="button">Block</a>
+                                <?php } ?>
+                            </td>
+                        </tr>
+                    <?php } ?>
+
+                    </body>
+
+                </table>
+        </div> <!-- /row -->
+
+    </div>	<!-- /container -->
+<?php }else {
+
+
+
+    } ?>
+
+
+
+

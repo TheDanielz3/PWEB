@@ -1,0 +1,29 @@
+{
+    "name":"kdyby/html-validator-panel",
+    "type":"library",
+    "description":"Nette DebugBar panel for validating the output HTML.",
+    "keywords":["nette", "tracy", "kdyby", "html", "validator"],
+    "homepage":"http://kdyby.org",
+    "license":["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+    "authors":[
+        {
+            "name":"Filip Procházka",
+            "homepage":"http://filip-prochazka.com"
+        }
+    ],
+    "support":{
+        "email":"filip@prochazka.su",
+        "issues":"https://github.com/Kdyby/HtmlValidatorPanel/issues"
+    },
+    "require":{
+        "tracy/tracy":"~2.3"
+    },
+    "suggest":{
+        "nette/di":"The extension can be registered using nette/di into your application"
+    },
+    "autoload":{
+        "psr-4":{
+            "Kdyby\\Extension\\Diagnostics\\HtmlValidator\\":""
+        }
+    }
+}

@@ -1,2 +1,0 @@
-PROJECT IN DEVELOPEMENT
--New test GitHub Line

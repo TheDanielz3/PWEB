@@ -1,0 +1,33 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: smendes
+ * Date: 19-04-2017
+ * Time: 19:03
+ */
+
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\Data;
+$dados = Data::get('plano');
+?>
+
+<?=Layout::includeLayout('header')?>
+
+
+    <div>
+    Plano de prestações: que bom!
+
+
+
+       <?php
+
+       foreach ( $dados as $dado ) {
+           echo '<br>' . $dado;
+       }
+
+       ?>
+
+    </div>
+
+
+<?=Layout::includeLayout('footer')?>

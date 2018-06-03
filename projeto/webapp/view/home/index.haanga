@@ -1,0 +1,13 @@
+{% extends "layout/layout.haanga" %}
+{#  Haanga. home/index.haanga #}
+
+{% block table %}
+    <table>
+        {% for row in table %}
+            <tr bgcolor="{% cycle '#aaaaaa' '#ffffff' %}">
+                <td>{{ row.id }}</td>
+                <td>{{ row.name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

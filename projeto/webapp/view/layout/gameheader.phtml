@@ -1,0 +1,67 @@
+<?php
+use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\Asset;
+use ArmoredCore\Facades\AssetBundler;
+use ArmoredCore\WebObjects\URL;
+use ArmoredCore\WebObjects\Session;?>
+<?php
+$user = Data::get('user');
+
+$userSession = Session::get('user');
+$currentaccount = Session::get('currentaccount');
+
+
+
+
+
+$perm = $userSession->type;
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author"      content="Silvio Priem Mendes, PhD">
+
+    <title>Blackjack</title>
+
+    <?=AssetBundler::css()?>
+
+    <link rel="shortcut icon" href="<?= Asset::image('gt_favicon.png')?>">
+    <link rel="stylesheet" media="screen" href="http://fokints.googleapis.com/css?family=Open+Sans:300,400,700">
+    <!-- Custom styles for our site template -->
+    <link rel="stylesheet" href="<?= Asset::css('/bootstrap-theme.css')?>" media="screen" >
+    <link rel="stylesheet" href="<?= Asset::css('/gamecss.css')?>" media="screen" >
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="<?= Asset::js('html5shiv.js')?>"></script>
+    <script src="<?= Asset::js('respond.min.js')?>"></script>
+    <![endif]-->
+</head>
+
+
+
+
+
+<!-- /.navbar -->
+<header id="head" class="secondary" >
+    <div class="navbar-collapse collapse">
+        <b style="font-size: 30px" style="text-align: left">creditos:<?php echo $currentaccount->saldo?></b>
+
+
+
+        <ul class="nav navbar-nav pull-right">
+
+            <li class="btn"><a href="<?= URL::toRoute('home/game')?>">Jogo</a></li>
+            <li class="btn"><a href="<?= URL::toRoute('home/user')?>">Minha Conta</a></li>
+            <li class="btn"><a href="<?= URL::toRoute('home/top')?>">Top Ten</a></li>
+            <?php if($perm == "admin"){ ?>
+                <li class="btn"><a href="<?= URL::toRoute('home/admin')?>">Admin</a></li>
+            <?php } ?>
+            <li class="btn"><a href="<?= URL::toRoute('home/destroysession')?>">Logout</a></li>
+        </ul>
+    </div><!--/.nav-collapse -->
+</header>

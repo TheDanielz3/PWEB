@@ -35,14 +35,14 @@ class UserController extends BaseController implements ResourceControllerInterfa
     {
         // create new resource (activerecord/model) instance
         // your form name fields must match the ones of the table fields
-        $users = new User(Post::getAll());
+        $user = new User(Post::getAll());
 
-        if($users->is_valid()){
-            $users->save();
+        if($user->is_valid()){
+            $user->save();
             Redirect::toRoute('user/index');
         } else {
             // return form with data and errors
-            Redirect::flashToRoute('user/create', ['user' => $users]);
+            Redirect::flashToRoute('user/create', ['user' => $user]);
         }
     }
 
@@ -85,7 +85,7 @@ class UserController extends BaseController implements ResourceControllerInterfa
     //Faz update ao utilizador
     public function update($id)
     {
-        $users = Book::find($id);
+        $users = User::find($id);
         $users->update_attributes(Post::getAll());
 
         if($users->is_valid()){
@@ -103,8 +103,28 @@ class UserController extends BaseController implements ResourceControllerInterfa
      */
     public function destroy($id)
     {
-        $users = Book::find($id);
+        $users = User::find($id);
         $users->delete();
         Redirect::toRoute('user/index');
+    }
+
+    public function mLogin()
+    {
+        $username = Post::get('username');
+        $pwd = Post::get('pwd');
+
+        $user = User::find_by_username_and_pwd($username,$pwd);
+
+        if($user == null)
+        {
+            echo '<script>alert("Username ou password errado.")</script>';
+            View::make('user.login');
+
+        }
+
+        else
+        {
+            Redirect::toRoute('user/index');
+        }
     }
 }

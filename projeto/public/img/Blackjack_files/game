@@ -1,0 +1,910 @@
+(function(){var el = document.createElement('style'); el.className='tracy-debug'; el.textContent="\/** * This file is part of the Tracy (https:\/\/tracy.nette.org) *\/ \/* common styles *\/ #tracy-debug { display: none; direction: ltr; line-height: 1.5; } body#tracy-debug { \/* in popup window *\/ margin: 0; display: block; } #tracy-debug:not(body) { position: absolute; bottom: 0; right: 0; } #tracy-debug * { font: inherit; line-height: inherit; color: inherit; background: transparent; margin: 0; padding: 0; border: none; text-align: inherit; list-style: inherit; opacity: 1; border-radius: 0; box-shadow: none; text-shadow: none; box-sizing: border-box; text-decoration: none; text-transform: inherit; white-space: inherit; float: none; clear: none; } #tracy-debug *:before, #tracy-debug *:after { all: unset; } #tracy-debug b, #tracy-debug strong { font-weight: bold; } #tracy-debug i, #tracy-debug em { font-style: italic; } #tracy-debug a { color: #125EAE; text-decoration: none; } #tracy-debug a:hover, #tracy-debug a:focus { background-color: #125EAE; color: white; } #tracy-debug h2, #tracy-debug h3, #tracy-debug p { margin: .4em 0; } #tracy-debug table { border-collapse: collapse; background: #FDF5CE; } #tracy-debug tr:nth-child(2n) td { background: #F7F0CB; } #tracy-debug td, #tracy-debug th { border: 1px solid #E6DFBF; padding: 2px 5px; vertical-align: top; text-align: left; } #tracy-debug th { background: #F4F3F1; color: #655E5E; font-size: 90%; font-weight: bold; } #tracy-debug pre, #tracy-debug code { font: 9pt\/1.5 Consolas, monospace; } #tracy-debug pre { white-space: pre; } #tracy-debug table .tracy-right { text-align: right; } #tracy-debug svg { display: inline; } \/* bar *\/ #tracy-debug-bar { font: normal normal 13px\/1.55 Tahoma, sans-serif; color: #333; border: 1px solid #c9c9c9; background: #EDEAE0 url('data:image\/png;base64,R0lGODlhAQAUALMAAOzq4e\/t5e7s4\/Dt5vDu5e3r4vDu5uvp4O\/t5AAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAABABQAAAQM0EgySEAYi1LA+UcEADs=') top; background-size: 1em; position: fixed; right: 0; bottom: 0; min-width: 50px; white-space: nowrap; z-index: 30000; opacity: .9; transition: opacity 0.2s; will-change: opacity, right, bottom; border-radius: 3px; box-shadow: 1px 1px 10px rgba(0, 0, 0, .15); } #tracy-debug-bar:hover { opacity: 1; transition: opacity 0.1s; } #tracy-debug-bar ul { list-style: none none; display: flex; flex-wrap: wrap; } #tracy-debug-bar ul:not(:first-child) li { opacity: .6; background: #F5F3EE; } #tracy-debug-bar ul:not(:first-child) li:first-child { width: 4.1em; text-align: center; } #tracy-debug-bar img { vertical-align: bottom; position: relative; top: -2px; } #tracy-debug-bar svg { vertical-align: bottom; width: 1.23em; height: 1.55em; } #tracy-debug-bar .tracy-label { margin-left: .2em; } #tracy-debug-bar li > a, #tracy-debug-bar li > span { color: #000; display: block; padding: 0 .4em; } #tracy-debug-bar li > a:hover { color: black; background: #c3c1b8; } #tracy-debug-bar li:first-child { cursor: move; } #tracy-debug-logo svg { width: 3.4em; margin: 0 .2em 0 .5em; } \/* panels *\/ #tracy-debug .tracy-panel { display: none; font: normal normal 12px\/1.5 sans-serif; background: white; color: #333; text-align: left; z-index: 20001; } body#tracy-debug .tracy-panel { \/* in popup window *\/ display: block; } #tracy-debug h1 { font: normal normal 23px\/1.4 Tahoma, sans-serif; color: #575753; margin: -5px -5px 5px; padding: 0 25px 0 5px; max-width: 700px; word-wrap: break-word; } #tracy-debug .tracy-mode-peek .tracy-inner, #tracy-debug .tracy-mode-float .tracy-inner { max-width: 700px; max-height: 500px; overflow: auto; } @media (max-height: 555px) { #tracy-debug .tracy-mode-peek .tracy-inner, #tracy-debug .tracy-mode-float .tracy-inner { max-height: calc(100vh - 55px); } } #tracy-debug .tracy-panel .tracy-icons { display: none; } #tracy-debug .tracy-mode-peek, #tracy-debug .tracy-mode-float { position: fixed; right: 0; bottom: 0; padding: 10px; min-width: 150px; min-height: 50px; border-radius: 5px; box-shadow: 1px 1px 20px rgba(102, 102, 102, 0.36); border: 1px solid rgba(0, 0, 0, 0.1); } #tracy-debug .tracy-mode-peek h1 { cursor: move; } #tracy-debug .tracy-mode-float { display: block; opacity: .95; transition: opacity 0.2s; will-change: opacity, right, bottom; } #tracy-debug .tracy-focused { display: block; opacity: 1; transition: opacity 0.1s; } #tracy-debug .tracy-mode-float h1 { cursor: move; } #tracy-debug .tracy-mode-float .tracy-icons { display: block; position: absolute; top: 0; right: 5px; font-size: 18px; } #tracy-debug .tracy-mode-window { padding: 10px; } #tracy-debug .tracy-icons a { color: #575753; } #tracy-debug .tracy-icons a:hover { color: white; } \/* dump *\/ #tracy-debug pre.tracy-dump div { padding-left: 3ex; } #tracy-debug pre.tracy-dump div div { border-left: 1px solid rgba(0, 0, 0, .1); margin-left: .5ex; } #tracy-debug pre.tracy-dump { background: #FDF5CE; padding: .4em .7em; border: 1px dotted silver; overflow: auto; } #tracy-debug table pre.tracy-dump { padding: 0; margin: 0; border: none; } #tracy-debug .tracy-dump-array, #tracy-debug .tracy-dump-object { color: #C22; } #tracy-debug .tracy-dump-string { color: #35D; } #tracy-debug .tracy-dump-number { color: #090; } #tracy-debug .tracy-dump-null, #tracy-debug .tracy-dump-bool { color: #850; } #tracy-debug .tracy-dump-visibility, #tracy-debug .tracy-dump-hash { font-size: 85%; color: #999; } #tracy-debug .tracy-dump-indent { display: none; } \/* toggle *\/ #tracy-debug .tracy-toggle:after { content: \"\\A0\\25BC\"; opacity: .4; } #tracy-debug .tracy-toggle.tracy-collapsed:after { content: \"\\A0\\25BA\"; } @media print { #tracy-debug * { display: none; } } \/** * This file is part of the Tracy (https:\/\/tracy.nette.org) *\/ .tracy-collapsed { display: none; } .tracy-toggle.tracy-collapsed { display: inline; } .tracy-toggle { cursor: pointer; } .tracy-toggle:after { content: \"\\A0\\25BC\"; opacity: .4; } .tracy-toggle.tracy-collapsed:after { content: \"\\A0\\25BA\"; } \/** * This file is part of the Tracy (https:\/\/tracy.nette.org) *\/ pre.tracy-dump { text-align: left; color: #444; background: white; } pre.tracy-dump div { padding-left: 3ex; } pre.tracy-dump div div { border-left: 1px solid rgba(0, 0, 0, .1); margin-left: .5ex; } .tracy-dump-array, .tracy-dump-object { color: #C22; } .tracy-dump-string { color: #35D; } .tracy-dump-number { color: #090; } .tracy-dump-null, .tracy-dump-bool { color: #850; } .tracy-dump-visibility, .tracy-dump-hash { font-size: 85%; color: #999; } .tracy-dump-indent { display: none; } span[data-tracy-href] { border-bottom: 1px dotted rgba(0, 0, 0, .2); } \/** * This file is part of the Tracy (https:\/\/tracy.nette.org) *\/ #tracy-bs { font: 9pt\/1.5 Verdana, sans-serif; background: white; color: #333; position: absolute; z-index: 20000; left: 0; top: 0; width: 100%; text-align: left; } #tracy-bs * { font: inherit; color: inherit; background: transparent; border: none; margin: 0; padding: 0; text-align: inherit; text-indent: 0; } #tracy-bs *:before, #tracy-bs *:after { all: unset; } #tracy-bs b { font-weight: bold; } #tracy-bs i { font-style: italic; } #tracy-bs a { text-decoration: none; color: #328ADC; padding: 2px 4px; margin: -2px -4px; } #tracy-bs a:hover, #tracy-bs a:focus { color: #085AA3; } #tracy-bs-toggle { position: absolute; right: .5em; top: .5em; text-decoration: none; background: #CD1818; color: white !important; padding: 3px; } #tracy-bs-error { background: #CD1818; color: white; font: 13pt\/1.5 Verdana, sans-serif !important; } #tracy-bs-error a { color: white !important; opacity: 0; font-size: .7em; } #tracy-bs-error:hover a { opacity: .6; } #tracy-bs-error a:hover { opacity: 1; } #tracy-bs-ie-warning { background: black; margin: 1em; padding: .5em; text-align: center; } #tracy-bs h1 { font-size: 15pt; font-weight: normal; text-shadow: 1px 1px 2px rgba(0, 0, 0, .3); margin: .7em 0; } #tracy-bs h1 span { white-space: pre-wrap; } #tracy-bs h2 { font: 14pt\/1.5 sans-serif !important; margin: .6em 0; } #tracy-bs h3 { font: bold 10pt\/1.5 Verdana, sans-serif !important; margin: 1em 0; padding: 0; } #tracy-bs p, #tracy-bs pre { margin: .8em 0 } #tracy-bs pre, #tracy-bs code, #tracy-bs table { font: 9pt\/1.5 Consolas, monospace !important; } #tracy-bs pre, #tracy-bs table { background: #FDF5CE; padding: .4em .7em; border: 1px dotted silver; overflow: auto; } #tracy-bs table pre { padding: 0; margin: 0; border: none; } #tracy-bs table { border-collapse: collapse; width: 100%; } #tracy-bs td, #tracy-bs th { vertical-align: top; text-align: left; padding: 2px 6px; border: 1px solid #e6dfbf; } #tracy-bs th { font-weight: bold; } #tracy-bs tr > :first-child { width: 20%; } #tracy-bs tr:nth-child(2n), #tracy-bs tr:nth-child(2n) pre { background-color: #F7F0CB; } #tracy-bs ol { margin: 1em 0; padding-left: 2.5em; } #tracy-bs ul { font: 7pt\/1.5 Verdana, sans-serif !important; padding: 2em 4em; margin: 1em 0 0; color: #777; background: #F6F5F3; border-top: 1px solid #DDD; } #tracy-bs-logo a { position: absolute; bottom: 0; right: 0; width: 100px; height: 50px; background: url('data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAAUBAMAAAD\/1DctAAAAMFBMVEWupZzj39rEvbTy8O3X0sz9\/PvGwLu8tavQysHq6OS0rKP5+Pbd2dT29fPMxbzPx8DKErMJAAAACXBIWXMAAAsTAAALEwEAmpwYAAACGUlEQVQoFX3TQWgTQRQA0MWLIJJDYehBTykhG5ERTx56K1u8eEhCYtomE7x5L4iLh0ViF7egewuFFqSIYE6hIHsIYQ6CQSg9CDKn4QsNCRlB59C74J\/ZNHW1+An5+bOPyf6\/s46oz2P+A0yIeZZ2ieEHi6TOnLKTxvWq+b52mxlVO3xnM1s7xLX1504XQH65OnW2dBqn7cCkYsFsfYsWpyY\/2salmFTpEyzeR8zosYqMdiPDXdyU52K1wgEa\/SjGpdEwUAxqvRfckQCDOyFearsEHe2grvkh\/cFAHKvdtI3lcVceKQIOFpv+FOZaNPQBwJZLPp+hfrvT5JZXaUFsR8zqQc9qSgAharkfS5M\/5F6nGJJAtXq\/eLr3ucZpHccSxOOIPaQhtHohpCH2Xu6rLmQ0djnr4\/+J3C6v+AW8\/XWYxwYNdlhWj\/P5fPSTQwVr0T9lGxdaBCqErNZaqYnEwbkjEB3NasGF3lPdrHa1nnxNOMgj0+neePUPjd2v\/qVvUv29ifvc19huQ48qwXShy\/9o8o3OSk0cs37mOFd0Ydgvsf\/oZEnPVtggfd66lORn9mDyyzXU13SRtH2L6aR5T\/snGAcZPfAXz5J1YlJWBEuxdMYqQecpBrlM49xAbmqyHA+xlA1FxBtqT2xmJoNXZlIt74ZBLeJ9ZGDqByNI7p543idzJ23vXEv7IgnsxiS+eNtwNbFdLq7+Bi4wQ0I4SVb9AAAAAElFTkSuQmCC') no-repeat; opacity: .6; padding: 0; margin: 0; } #tracy-bs-logo a:hover, #tracy-bs-logo a:focus { opacity: 1; transition: opacity 0.1s; } #tracy-bs div.panel { padding: 1px 25px; } #tracy-bs div.inner { background: #F4F3F1; padding: .1em 1em 1em; border-radius: 8px; } #tracy-bs .outer { overflow: auto; } \/* source code *\/ #tracy-bs pre.code > div { min-width: 100%; float: left; white-space: pre; } #tracy-bs .highlight { background: #CD1818; color: white; font-weight: bold; font-style: normal; display: block; padding: 0 .4em; margin: 0 -.4em; } #tracy-bs .line { color: #9F9C7F; font-weight: normal; font-style: normal; } #tracy-bs pre:hover span[title] { border-bottom: 1px solid rgba(0, 0, 0, 0.2); } #tracy-bs a[href^=editor\\:] { color: inherit; border-bottom: 1px dotted rgba(0, 0, 0, .3); } #tracy-bs span[data-tracy-href] { border-bottom: 1px dotted rgba(0, 0, 0, .3); } \/* toggle *\/ html.tracy-js #tracy-bs .tracy-collapsed { display: none; } html.tracy-js #tracy-bs .tracy-toggle.tracy-collapsed { display: inline; } #tracy-bs .tracy-toggle { cursor: pointer; } #tracy-bs .tracy-toggle:after { content: \"\\A0\\25BC\"; opacity: .4; } #tracy-bs .tracy-toggle.tracy-collapsed:after { content: \"\\A0\\25BA\"; opacity: .4; } \/* dump *\/ #tracy-bs .tracy-dump-array, #tracy-bs .tracy-dump-object { color: #C22; } #tracy-bs .tracy-dump-string { color: #35D; } #tracy-bs .tracy-dump-number { color: #090; } #tracy-bs .tracy-dump-null, #tracy-bs .tracy-dump-bool { color: #850; } #tracy-bs .tracy-dump-visibility, #tracy-bs .tracy-dump-hash { font-size: 85%; color: #998; } #tracy-bs .tracy-dump-indent { display: none; } #tracy-bs pre.tracy-dump div { padding-left: 3ex; } #tracy-bs pre.tracy-dump div div { border-left: 1px solid rgba(0, 0, 0, .1); margin-left: .5ex; } #tracy-bs .caused { float: right; padding: .3em .6em; background: #df8075; border-radius: 0 0 0 8px; white-space: nowrap; } #tracy-bs .caused a { color: white; } "; document.head.appendChild(el);})();
+/**
+ * This file is part of the Tracy (https://tracy.nette.org)
+ */
+
+(function(){
+	Tracy = window.Tracy || {};
+
+	if (document.currentScript) {
+		var nonce = document.currentScript.getAttribute('nonce');
+		var contentId = document.currentScript.dataset.id;
+	}
+
+	Tracy.getAjaxHeader = function() {
+		return contentId;
+	};
+
+	var Panel = Tracy.DebugPanel = function(id) {
+		this.id = id;
+		this.elem = document.getElementById(this.id);
+		this.elem.Tracy = this.elem.Tracy || {};
+	};
+
+	Panel.PEEK = 'tracy-mode-peek';
+	Panel.FLOAT = 'tracy-mode-float';
+	Panel.WINDOW = 'tracy-mode-window';
+	Panel.FOCUSED = 'tracy-focused';
+	Panel.zIndex = 20000;
+
+	Panel.prototype.init = function() {
+		var _this = this, elem = this.elem;
+
+		elem.innerHTML = elem.dataset.tracyContent;
+		Tracy.Dumper.init(this.dumps, elem);
+		delete elem.dataset.tracyContent;
+		delete this.dumps;
+		evalScripts(elem);
+
+		draggable(elem, {
+			handle: elem.querySelector('h1'),
+			start: function() {
+				_this.toFloat();
+			}
+		});
+
+		elem.addEventListener('mouseover', function(e) {
+			if (isTargetChanged(e.relatedTarget, this)) {
+				_this.focus();
+			}
+		});
+
+		elem.addEventListener('mouseout', function(e) {
+			if (isTargetChanged(e.relatedTarget, this)) {
+				_this.blur();
+			}
+		});
+
+		elem.addEventListener('click', function() {
+			_this.oldPosition = getPosition(elem);
+		});
+
+		elem.addEventListener('tracy-toggle', function() {
+			if (_this.oldPosition) {
+				var pos = getPosition(elem);
+				setPosition(elem, {
+					right: pos.right - pos.width + _this.oldPosition.width,
+					bottom: pos.bottom - pos.height + _this.oldPosition.height
+				});
+				_this.oldPosition = null;
+			}
+		});
+
+		forEach(elem.querySelectorAll('.tracy-icons a'), function(a) {
+			a.addEventListener('click', function(e) {
+				if (this.rel === 'close') {
+					_this.toPeek();
+				} else {
+					_this.toWindow();
+				}
+				e.preventDefault();
+			});
+		});
+
+		if (!this.is('tracy-ajax')) {
+			Tracy.Toggle.persist(elem);
+		}
+	};
+
+	Panel.prototype.is = function(mode) {
+		return this.elem.classList.contains(mode);
+	};
+
+	Panel.prototype.focus = function(callback) {
+		var elem = this.elem;
+		if (this.is(Panel.WINDOW)) {
+			elem.Tracy.window.focus();
+		} else {
+			clearTimeout(elem.Tracy.displayTimeout);
+			elem.Tracy.displayTimeout = setTimeout(function() {
+				elem.classList.add(Panel.FOCUSED);
+				elem.style.zIndex = Panel.zIndex++;
+				if (callback) {
+					callback();
+				}
+			}, 50);
+		}
+	};
+
+	Panel.prototype.blur = function() {
+		var elem = this.elem;
+		if (this.is(Panel.PEEK)) {
+			clearTimeout(elem.Tracy.displayTimeout);
+			elem.Tracy.displayTimeout = setTimeout(function() {
+				elem.classList.remove(Panel.FOCUSED);
+			}, 50);
+		}
+	};
+
+	Panel.prototype.toFloat = function() {
+		this.elem.classList.remove(Panel.WINDOW);
+		this.elem.classList.remove(Panel.PEEK);
+		this.elem.classList.add(Panel.FLOAT);
+		this.reposition();
+	};
+
+	Panel.prototype.toPeek = function() {
+		this.elem.classList.remove(Panel.WINDOW);
+		this.elem.classList.remove(Panel.FLOAT);
+		this.elem.classList.remove(Panel.FOCUSED);
+		this.elem.classList.add(Panel.PEEK);
+	};
+
+	Panel.prototype.toWindow = function() {
+		var offset = getOffset(this.elem);
+		offset.left += typeof window.screenLeft === 'number' ? window.screenLeft : (window.screenX + 10);
+		offset.top += typeof window.screenTop === 'number' ? window.screenTop : (window.screenY + 50);
+
+		var win = window.open('', this.id.replace(/-/g, '_'), 'left=' + offset.left + ',top=' + offset.top
+			+ ',width=' + this.elem.offsetWidth + ',height=' + this.elem.offsetHeight + ',resizable=yes,scrollbars=yes');
+		if (!win) {
+			return false;
+		}
+
+		var doc = win.document;
+		doc.write('<!DOCTYPE html><meta charset="utf-8">'
+			+ '<script src="?_tracy_bar=js&amp;XDEBUG_SESSION_STOP=1" onload="Tracy.Dumper.init()" async><\/script>'
+			+ '<body id="tracy-debug">'
+		);
+		doc.body.innerHTML = '<div class="tracy-panel tracy-mode-window" id="' + this.elem.id + '">' + this.elem.innerHTML + '<\/div>';
+		evalScripts(doc.body);
+		if (this.elem.querySelector('h1')) {
+			doc.title = this.elem.querySelector('h1').textContent;
+		}
+
+		var _this = this;
+		win.addEventListener('beforeunload', function() {
+			_this.toPeek();
+			win.close(); // forces closing, can be invoked by F5
+		});
+
+		doc.addEventListener('keyup', function(e) {
+			if (e.keyCode === 27 && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey) {
+				win.close();
+			}
+		});
+
+		this.elem.classList.remove(Panel.FLOAT);
+		this.elem.classList.remove(Panel.PEEK);
+		this.elem.classList.remove(Panel.FOCUSED);
+		this.elem.classList.add(Panel.WINDOW);
+		this.elem.Tracy.window = win;
+		return true;
+	};
+
+	Panel.prototype.reposition = function() {
+		var pos = getPosition(this.elem);
+		if (pos.width) { // is visible?
+			setPosition(this.elem, {right: pos.right, bottom: pos.bottom});
+		}
+	};
+
+	Panel.prototype.savePosition = function() {
+		var pos = getPosition(this.elem);
+		if (this.is(Panel.WINDOW)) {
+			localStorage.setItem(this.id, JSON.stringify({window: true}));
+		} else if (pos.width) {
+			localStorage.setItem(this.id, JSON.stringify({right: pos.right, bottom: pos.bottom}));
+		} else {
+			localStorage.removeItem(this.id);
+		}
+	};
+
+	Panel.prototype.restorePosition = function() {
+		var pos = JSON.parse(localStorage.getItem(this.id));
+		if (!pos) {
+			this.elem.classList.add(Panel.PEEK);
+		} else if (pos.window) {
+			this.init();
+			this.toWindow() || this.toFloat();
+		} else if (this.elem.dataset.tracyContent) {
+			this.init();
+			this.toFloat();
+			setPosition(this.elem, pos);
+		}
+	};
+
+
+	var Bar = Tracy.DebugBar = function() {
+	};
+
+	Bar.prototype.id = 'tracy-debug-bar';
+
+	Bar.prototype.init = function() {
+		this.elem = document.getElementById(this.id);
+
+		draggable(this.elem, {
+			draggedClass: 'tracy-dragged'
+		});
+
+		this.initTabs(this.elem);
+		this.restorePosition();
+	};
+
+	Bar.prototype.initTabs = function(elem) {
+		var _this = this;
+
+		forEach(elem.getElementsByTagName('a'), function(a) {
+			a.addEventListener('click', function(e) {
+				if (this.rel === 'close') {
+					_this.close();
+
+				} else if (this.rel) {
+					var panel = Debug.panels[this.rel];
+					if (e.shiftKey) {
+						panel.toFloat();
+						panel.toWindow();
+
+					} else if (panel.is(Panel.FLOAT)) {
+						panel.toPeek();
+
+					} else {
+						panel.toFloat();
+						setPosition(panel.elem, {
+							right: getPosition(panel.elem).right + Math.round(Math.random() * 100) + 20,
+							bottom: getPosition(panel.elem).bottom + Math.round(Math.random() * 100) + 20
+						});
+					}
+				}
+				e.preventDefault();
+			});
+
+			a.addEventListener('mouseover', function(e) {
+				if (isTargetChanged(e.relatedTarget, this) && this.rel && this.rel !== 'close' && !elem.classList.contains('tracy-dragged')) {
+					var panel = Debug.panels[this.rel], link = this;
+					panel.focus(function() {
+						if (panel.is(Panel.PEEK)) {
+							if (panel.elem.dataset.tracyContent) {
+								panel.init();
+							}
+
+							var pos = getPosition(panel.elem);
+							setPosition(panel.elem, {
+								right: pos.right - getOffset(link).left + pos.width - getPosition(link).width - 4 + getOffset(panel.elem).left,
+								bottom: pos.bottom - getOffset(elem).top + pos.height + 4 + getOffset(panel.elem).top
+							});
+						}
+					});
+				}
+			});
+
+			a.addEventListener('mouseout', function(e) {
+				if (isTargetChanged(e.relatedTarget, this) && this.rel && this.rel !== 'close' && !elem.classList.contains('tracy-dragged')) {
+					Debug.panels[this.rel].blur();
+				}
+			});
+		});
+		this.autoHideLabels();
+	};
+
+	Bar.prototype.autoHideLabels = function() {
+		forEach(this.elem.children, function (ul) {
+			var labels = ul.querySelectorAll('.tracy-label');
+			for (var i = labels.length - 1; i >= 0 && ul.clientHeight >= 40; i--) { // row height = 1em (cca 20px)
+				labels.item(i).hidden = true;
+			}
+		});
+	};
+
+	Bar.prototype.close = function() {
+		document.getElementById('tracy-debug').style.display = 'none';
+	};
+
+	Bar.prototype.savePosition = function() {
+		var pos = getPosition(document.getElementById(this.id));
+		localStorage.setItem(this.id, JSON.stringify({right: pos.right, bottom: pos.bottom}));
+	};
+
+	Bar.prototype.restorePosition = function() {
+		var pos = JSON.parse(localStorage.getItem(this.id));
+		if (pos) {
+			setPosition(document.getElementById(this.id), pos);
+		}
+	};
+
+
+	var Debug = Tracy.Debug = {};
+
+	Debug.bar = new Bar;
+
+	Debug.panels = {};
+
+	Debug.init = function(content, dumps) {
+		if (!document.documentElement.dataset) {
+			throw new Error('Tracy requires IE 11+');
+		}
+
+		Debug.layer = document.createElement('div');
+		Debug.layer.setAttribute('id', 'tracy-debug');
+		Debug.layer.innerHTML = content;
+		document.documentElement.appendChild(Debug.layer);
+		evalScripts(Debug.layer);
+		Tracy.Dumper.init();
+		Debug.layer.style.display = 'block';
+		Debug.bar.init();
+
+		forEach(document.querySelectorAll('.tracy-panel'), function(panel) {
+			Debug.panels[panel.id] = new Panel(panel.id);
+			Debug.panels[panel.id].dumps = dumps;
+			Debug.panels[panel.id].restorePosition();
+		});
+
+		Debug.captureWindow();
+		Debug.captureAjax();
+	};
+
+	Debug.loadAjax = function(content, dumps) {
+		forEach(Debug.layer.querySelectorAll('.tracy-panel.tracy-ajax'), function(panel) {
+			Debug.panels[panel.id].savePosition();
+			delete Debug.panels[panel.id];
+			panel.parentNode.removeChild(panel);
+		});
+
+		var ajaxBar = document.getElementById('tracy-ajax-bar');
+		if (ajaxBar) {
+			ajaxBar.parentNode.removeChild(ajaxBar);
+		}
+
+		Debug.layer.insertAdjacentHTML('beforeend', content);
+		evalScripts(Debug.layer);
+		ajaxBar = document.getElementById('tracy-ajax-bar');
+		document.getElementById(Bar.prototype.id).appendChild(ajaxBar);
+
+		forEach(document.querySelectorAll('.tracy-panel'), function(panel) {
+			if (!Debug.panels[panel.id]) {
+				Debug.panels[panel.id] = new Panel(panel.id);
+				Debug.panels[panel.id].dumps = dumps;
+				Debug.panels[panel.id].restorePosition();
+			}
+		});
+
+		Debug.bar.initTabs(ajaxBar);
+	};
+
+	Debug.captureWindow = function() {
+		window.addEventListener('resize', function() {
+			var bar = document.getElementById(Bar.prototype.id);
+			setPosition(bar, {right: getPosition(bar).right, bottom: getPosition(bar).bottom});
+			for (var id in Debug.panels) {
+				Debug.panels[id].reposition();
+			}
+		});
+
+		window.addEventListener('unload', function() {
+			Debug.bar.savePosition();
+			for (var id in Debug.panels) {
+				Debug.panels[id].savePosition();
+			}
+		});
+	};
+
+	Debug.captureAjax = function() {
+		var header = Tracy.getAjaxHeader();
+		if (!header) {
+			return;
+		}
+		var oldOpen = XMLHttpRequest.prototype.open;
+
+		XMLHttpRequest.prototype.open = function() {
+			oldOpen.apply(this, arguments);
+			if (window.TracyAutoRefresh !== false && arguments[1].indexOf('//') <= 0 || arguments[1].indexOf(location.origin + '/') === 0) {
+				this.setRequestHeader('X-Tracy-Ajax', header);
+				this.addEventListener('load', function() {
+					if (this.getAllResponseHeaders().match(/^X-Tracy-Ajax: 1/mi)) {
+						Debug.loadScript('?_tracy_bar=content-ajax.' + header + '&XDEBUG_SESSION_STOP=1&v=' + Math.random());
+					}
+				});
+			}
+		};
+
+		if (window.fetch) {
+			var oldFetch = window.fetch;
+			window.fetch = function(request, options) {
+				options = options || {};
+				options.headers = new Headers(options.headers || {});
+				var url = request instanceof Request ? request.url : request;
+
+				if (window.TracyAutoRefresh !== false && url.indexOf('//') <= 0 || url.indexOf(location.origin + '/') === 0) {
+					options.headers.set('X-Tracy-Ajax', header);
+					options.credentials = (request instanceof Request && request.credentials) || options.credentials || 'same-origin';
+
+					return oldFetch(request, options).then(function (response) {
+						if (response.headers.has('X-Tracy-Ajax') && response.headers.get('X-Tracy-Ajax')[0] === '1') {
+							Debug.loadScript('?_tracy_bar=content-ajax.' + header + '&XDEBUG_SESSION_STOP=1&v=' + Math.random());
+						}
+
+						return response;
+					});
+				}
+
+				return oldFetch(request, options);
+			};
+		}
+	};
+
+	Debug.loadScript = function(url) {
+		if (Debug.scriptElem) {
+			Debug.scriptElem.parentNode.removeChild(Debug.scriptElem);
+		}
+		Debug.scriptElem = document.createElement('script');
+		Debug.scriptElem.src = url;
+		Debug.scriptElem.setAttribute('nonce', nonce);
+		document.documentElement.appendChild(Debug.scriptElem);
+	};
+
+	function evalScripts(elem) {
+		forEach(elem.getElementsByTagName('script'), function(script) {
+			if ((!script.hasAttribute('type') || script.type === 'text/javascript' || script.type === 'application/javascript') && !script.tracyEvaluated) {
+				var dolly = script.ownerDocument.createElement('script');
+				dolly.textContent = script.textContent;
+				dolly.setAttribute('nonce', nonce);
+				script.ownerDocument.documentElement.appendChild(dolly);
+				script.tracyEvaluated = true;
+			}
+		});
+	}
+
+	// emulate mouseenter & mouseleave
+	function isTargetChanged(target, dest) {
+		while (target) {
+			if (target === dest) {
+				return;
+			}
+			target = target.parentNode;
+		}
+		return true;
+	}
+
+
+	var dragging;
+
+	function draggable(elem, options) {
+		var dE = document.documentElement, started, deltaX, deltaY, clientX, clientY;
+		options = options || {};
+
+		var redraw = function () {
+			if (dragging) {
+				setPosition(elem, {right: deltaX - clientX, bottom: deltaY - clientY});
+				requestAnimationFrame(redraw);
+			}
+		};
+
+		var onmousemove = function(e) {
+			if (e.buttons === 0) {
+				return onmouseup(e);
+			}
+			if (!started) {
+				if (options.draggedClass) {
+					elem.classList.add(options.draggedClass);
+				}
+				if (options.start) {
+					options.start(e, elem);
+				}
+				started = true;
+			}
+
+			clientX = e.clientX;
+			clientY = e.clientY;
+			return false;
+		};
+
+		var onmouseup = function(e) {
+			if (started) {
+				if (options.draggedClass) {
+					elem.classList.remove(options.draggedClass);
+				}
+				if (options.stop) {
+					options.stop(e, elem);
+				}
+			}
+			dragging = null;
+			dE.removeEventListener('mousemove', onmousemove);
+			dE.removeEventListener('mouseup', onmouseup);
+			return false;
+		};
+
+		(options.handle || elem).addEventListener('mousedown', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+
+			if (dragging) { // missed mouseup out of window?
+				return onmouseup(e);
+			}
+
+			var pos = getPosition(elem);
+			clientX = e.clientX;
+			clientY = e.clientY;
+			deltaX = pos.right + clientX;
+			deltaY = pos.bottom + clientY;
+			dragging = true;
+			started = false;
+			dE.addEventListener('mousemove', onmousemove);
+			dE.addEventListener('mouseup', onmouseup);
+			requestAnimationFrame(redraw);
+			if (options.start) {
+				options.start(e, elem);
+			}
+		});
+
+		(options.handle || elem).addEventListener('click', function(e) {
+			if (started) {
+				e.stopImmediatePropagation();
+			}
+		});
+	}
+
+	// returns total offset for element
+	function getOffset(elem) {
+		var res = {left: elem.offsetLeft, top: elem.offsetTop};
+		while (elem = elem.offsetParent) { // eslint-disable-line
+			res.left += elem.offsetLeft; res.top += elem.offsetTop;
+		}
+		return res;
+	}
+
+	// move to new position
+	function setPosition(elem, coords) {
+		var dE = document.documentElement,
+			height = document.compatMode === 'BackCompat' ? window.innerHeight : dE.clientHeight;
+		elem.style.right = Math.min(Math.max(coords.right, 0), dE.clientWidth - elem.offsetWidth) + 'px';
+		elem.style.bottom = Math.min(Math.max(coords.bottom, 0), height - elem.offsetHeight) + 'px';
+	}
+
+	// returns current position
+	function getPosition(elem) {
+		return {
+			left: elem.offsetLeft,
+			top: elem.offsetTop,
+			right: elem.style.right ? parseInt(elem.style.right, 10) : 0,
+			bottom: elem.style.bottom ? parseInt(elem.style.bottom, 10) : 0,
+			width: elem.offsetWidth,
+			height: elem.offsetHeight
+		};
+	}
+
+	function forEach(arr, cb) {
+		Array.prototype.forEach.call(arr, cb);
+	}
+
+})();
+/**
+ * This file is part of the Tracy (https://tracy.nette.org)
+ */
+
+(function() {
+	Tracy = window.Tracy || {};
+
+	Tracy.Toggle = Tracy.Toggle || {};
+
+	// enables <a class="tracy-toggle" href="#"> or <span data-tracy-ref="#"> toggling
+	Tracy.Toggle.init = function() {
+		document.documentElement.addEventListener('click', function(e) {
+			var el = Tracy.closest(e.target, '.tracy-toggle');
+			if (el && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey) {
+				Tracy.Toggle.toggle(el);
+			}
+		});
+		this.init = function() {};
+	};
+
+
+	// changes element visibility
+	Tracy.Toggle.toggle = function(el, show) {
+		var collapsed = el.classList.contains('tracy-collapsed'),
+			ref = el.getAttribute('data-tracy-ref') || el.getAttribute('href', 2),
+			dest = el;
+
+		if (typeof show === 'undefined') {
+			show = collapsed;
+		} else if (!show === collapsed) {
+			return;
+		}
+
+		if (!ref || ref === '#') {
+			ref = '+';
+		} else if (ref.substr(0, 1) === '#') {
+			dest = document;
+		}
+		ref = ref.match(/(\^\s*([^+\s]*)\s*)?(\+\s*(\S*)\s*)?(.*)/);
+		dest = ref[1] ? Tracy.closest(dest.parentNode, ref[2]) : dest;
+		dest = ref[3] ? Tracy.closest(dest.nextElementSibling, ref[4], 'nextElementSibling') : dest;
+		dest = ref[5] ? dest.querySelector(ref[5]) : dest;
+
+		el.classList.toggle('tracy-collapsed', !show);
+		dest.classList.toggle('tracy-collapsed', !show);
+
+		if (typeof window.Event === 'function') {
+			var toggleEvent = new Event('tracy-toggle', {bubbles: true});
+		} else {
+			toggleEvent = document.createEvent('Event');
+			toggleEvent.initEvent('tracy-toggle', true, false);
+		}
+		el.dispatchEvent(toggleEvent);
+	};
+
+
+	// save & restore toggles
+	Tracy.Toggle.persist = function(baseEl, restore) {
+		var saved = [];
+		baseEl.addEventListener('tracy-toggle', function(e) {
+			if (saved.indexOf(e.target) < 0) {
+				saved.push(e.target);
+			}
+		});
+
+		var toggles = JSON.parse(sessionStorage.getItem('tracy-toggles-' + baseEl.id));
+		if (toggles && restore !== false) {
+			toggles.forEach(function(item) {
+				var el = baseEl;
+				for (var i in item.path) {
+					if (!(el = el.children[item.path[i]])) {
+						return;
+					}
+				}
+				if (el.textContent === item.text) {
+					Tracy.Toggle.toggle(el, item.show);
+				}
+			});
+		}
+
+		window.addEventListener('unload', function() {
+			toggles = [].map.call(saved, function(el) {
+				var item = {path: [], text: el.textContent, show: !el.classList.contains('tracy-collapsed')};
+				do {
+					item.path.unshift([].indexOf.call(el.parentNode.children, el));
+					el = el.parentNode;
+				} while (el && el !== baseEl);
+				return item;
+			});
+			sessionStorage.setItem('tracy-toggles-' + baseEl.id, JSON.stringify(toggles));
+		});
+	};
+
+
+	// finds closing maching element
+	Tracy.closest = function(el, selector, func) {
+		var matches = el.matches || el.matchesSelector || el.msMatchesSelector || el.mozMatchesSelector || el.webkitMatchesSelector || el.oMatchesSelector;
+		while (el && selector && !(el.nodeType === 1 && matches.call(el, selector))) {
+			el = el[func || 'parentNode'];
+		}
+		return el;
+	};
+
+})();
+/**
+ * This file is part of the Tracy (https://tracy.nette.org)
+ */
+
+(function() {
+	var COLLAPSE_COUNT = 7,
+		COLLAPSE_COUNT_TOP = 14;
+
+	Tracy = window.Tracy || {};
+
+	Tracy.Dumper = Tracy.Dumper || {};
+
+	Tracy.Dumper.init = function(repository, context) {
+		if (repository) {
+			[].forEach.call((context || document).querySelectorAll('.tracy-dump[data-tracy-dump]'), function(el) {
+				try {
+					el.appendChild(build(JSON.parse(el.getAttribute('data-tracy-dump')), repository, el.classList.contains('tracy-collapsed')));
+					el.classList.remove('tracy-collapsed');
+					el.removeAttribute('data-tracy-dump');
+				} catch (e) {
+					if (!(e instanceof UnknownEntityException)) {
+						throw e;
+					}
+				}
+			});
+		}
+
+		if (this.inited) {
+			return;
+		}
+		this.inited = true;
+
+		// enables <span data-tracy-href=""> & ctrl key
+		document.documentElement.addEventListener('click', function(e) {
+			var el;
+			if (e.ctrlKey && (el = Tracy.closest(e.target, '[data-tracy-href]'))) {
+				location.href = el.getAttribute('data-tracy-href');
+				return false;
+			}
+		});
+
+		Tracy.Toggle.init();
+	};
+
+
+	var build = function(data, repository, collapsed, parentIds) {
+		var type = data === null ? 'null' : typeof data,
+			collapseCount = typeof collapsed === 'undefined' ? COLLAPSE_COUNT_TOP : COLLAPSE_COUNT;
+
+		if (type === 'null' || type === 'string' || type === 'number' || type === 'boolean') {
+			data = type === 'string' ? '"' + data + '"' : (data + '').toUpperCase();
+			return createEl(null, null, [
+				createEl(
+					'span',
+					{'class': 'tracy-dump-' + type.replace('ean', '')},
+					[data + '\n']
+				)
+			]);
+
+		} else if (Array.isArray(data)) {
+			return buildStruct(
+				[
+					createEl('span', {'class': 'tracy-dump-array'}, ['array']),
+					' (' + (data[0] && data.length || '') + ')'
+				],
+				' [ ... ]',
+				data[0] === null ? null : data,
+				collapsed === true || data.length >= collapseCount,
+				repository,
+				parentIds
+			);
+
+		} else if (type === 'object' && data.number) {
+			return createEl(null, null, [
+				createEl('span', {'class': 'tracy-dump-number'}, [data.number + '\n'])
+			]);
+
+		} else if (type === 'object' && data.type) {
+			return createEl(null, null, [
+				createEl('span', null, [data.type + '\n'])
+			]);
+
+		} else if (type === 'object') {
+			var id = data.object || data.resource,
+				object = repository[id];
+
+			if (!object) {
+				throw new UnknownEntityException;
+			}
+			parentIds = parentIds || [];
+			var recursive = parentIds.indexOf(id) > -1;
+			parentIds.push(id);
+
+			return buildStruct(
+				[
+					createEl('span', {
+						'class': data.object ? 'tracy-dump-object' : 'tracy-dump-resource',
+						title: object.editor ? 'Declared in file ' + object.editor.file + ' on line ' + object.editor.line : null,
+						'data-tracy-href': object.editor ? object.editor.url : null
+					}, [object.name]),
+					' ',
+					createEl('span', {'class': 'tracy-dump-hash'}, ['#' + id])
+				],
+				' { ... }',
+				object.items,
+				collapsed === true || recursive || (object.items && object.items.length >= collapseCount),
+				repository,
+				parentIds
+			);
+		}
+	};
+
+
+	var buildStruct = function(span, ellipsis, items, collapsed, repository, parentIds) {
+		var res, toggle, div, handler;
+
+		if (!items || !items.length) {
+			span.push(!items || items.length ? ellipsis + '\n' : '\n');
+			return createEl(null, null, span);
+		}
+
+		res = createEl(null, null, [
+			toggle = createEl('span', {'class': collapsed ? 'tracy-toggle tracy-collapsed' : 'tracy-toggle'}, span),
+			'\n',
+			div = createEl('div', {'class': collapsed ? 'tracy-collapsed' : ''})
+		]);
+
+		if (collapsed) {
+			toggle.addEventListener('tracy-toggle', handler = function() {
+				toggle.removeEventListener('tracy-toggle', handler);
+				createItems(div, items, repository, parentIds);
+			});
+		} else {
+			createItems(div, items, repository, parentIds);
+		}
+		return res;
+	};
+
+
+	var createEl = function(el, attrs, content) {
+		if (!(el instanceof Node)) {
+			el = el ? document.createElement(el) : document.createDocumentFragment();
+		}
+		for (var id in attrs || {}) {
+			if (attrs[id] !== null) {
+				el.setAttribute(id, attrs[id]);
+			}
+		}
+		content = content || [];
+		for (id = 0; id < content.length; id++) {
+			var child = content[id];
+			if (child !== null) {
+				el.appendChild(child instanceof Node ? child : document.createTextNode(child));
+			}
+		}
+		return el;
+	};
+
+
+	var createItems = function(el, items, repository, parentIds) {
+		for (var i = 0; i < items.length; i++) {
+			var vis = items[i][2];
+			createEl(el, null, [
+				createEl('span', {'class': 'tracy-dump-key'}, [items[i][0]]),
+				vis ? ' ' : null,
+				vis ? createEl('span', {'class': 'tracy-dump-visibility'}, [vis === 1 ? 'protected' : 'private']) : null,
+				' => ',
+				build(items[i][1], repository, null, parentIds)
+			]);
+		}
+	};
+
+	var UnknownEntityException = function() {};
+
+})();
+/**
+ * This file is part of the Tracy (https://tracy.nette.org)
+ */
+
+(function(){
+	Tracy = window.Tracy || {};
+
+	var BlueScreen = Tracy.BlueScreen = {},
+		inited;
+
+	BlueScreen.init = function(ajax) {
+		var blueScreen = document.getElementById('tracy-bs');
+
+		for (var i = 0, styles = []; i < document.styleSheets.length; i++) {
+			var style = document.styleSheets[i];
+			if (!style.ownerNode.classList.contains('tracy-debug')) {
+				style.oldDisabled = style.disabled;
+				style.disabled = true;
+				styles.push(style);
+			}
+		}
+
+		document.getElementById('tracy-bs-toggle').addEventListener('tracy-toggle', function() {
+			var collapsed = this.classList.contains('tracy-collapsed');
+			for (i = 0; i < styles.length; i++) {
+				styles[i].disabled = collapsed ? styles[i].oldDisabled : true;
+			}
+		});
+
+		if (!ajax) {
+			document.body.appendChild(blueScreen);
+			var id = location.href + document.getElementById('tracy-bs-error').textContent;
+			Tracy.Toggle.persist(blueScreen, sessionStorage.getItem('tracy-toggles-bskey') === id);
+			sessionStorage.setItem('tracy-toggles-bskey', id);
+		}
+
+		if (inited) {
+			return;
+		}
+		inited = true;
+
+		// enables toggling via ESC
+		document.addEventListener('keyup', function(e) {
+			if (e.keyCode === 27 && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey) { // ESC
+				Tracy.Toggle.toggle(document.getElementById('tracy-bs-toggle'));
+			}
+		});
+	};
+
+	BlueScreen.loadAjax = function(content, dumps) {
+		var ajaxBs = document.getElementById('tracy-bs');
+		if (ajaxBs) {
+			ajaxBs.parentNode.removeChild(ajaxBs);
+		}
+		document.body.insertAdjacentHTML('beforeend', content);
+		ajaxBs = document.getElementById('tracy-bs');
+		Tracy.Dumper.init(dumps, ajaxBs);
+		BlueScreen.init(true);
+		window.scrollTo(0, 0);
+	};
+
+})();

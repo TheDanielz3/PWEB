@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7001a1a5-552a-4369-8b2d-3d517ff80e18" name="Default" comment="" />
+    <ignored path="PPAWS-MVC.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="webapp@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="webapp@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="webapp" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="f1cars" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="webapp@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="webapp" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="PPAWS-MVC" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="router.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/router.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/view/home/game.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="104" column="49" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.phtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webapp/view/home/user.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="86" column="175" selection-start-line="86" selection-start-column="175" selection-end-line="86" selection-end-column="175" />
+              <folding>
+                <element signature="e#6#38#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gameheader.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/view/layout/gameheader.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#b#0;n#div#0;n#header#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#1;n#b#0;n#div#0;n#header#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="top.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/view/home/top.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/controller/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="699">
+              <caret line="72" column="43" lean-forward="true" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminpanel.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/view/home/adminpanel.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="19" column="222" selection-start-line="19" selection-start-column="222" selection-end-line="19" selection-end-column="222" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Currentaccount.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/model/Currentaccount.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="42" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlackJackContext.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/model/BlackJackContext.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1785">
+              <caret line="110" column="9" lean-forward="true" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/controller/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="563">
+              <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="64" />
+              <folding>
+                <element signature="e#6#49#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Html5" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>navbar-inverse</find>
+      <find>navbar</find>
+      <find>.navbar-</find>
+      <find>navbar navbar-inverse</find>
+      <find>navba</find>
+      <find>btn</find>
+      <find>col-lg-4 text-right</find>
+      <find>col-lg-4</find>
+      <find>HTTPRouter</find>
+      <find>background</find>
+      <find>countainer</find>
+      <find>container</find>
+      <find>body</find>
+      <find>footer</find>
+      <find>head</find>
+      <find>row</find>
+      <find>session</find>
+      <find>index</find>
+      <find>login</find>
+      <find>store</find>
+      <find>show</find>
+      <find>user</find>
+      <find>$name</find>
+      <find>game</find>
+      <find>$' game'</find>
+      <find>' game'</find>
+      <find>getPlayerHand</find>
+      <find>User-&gt;credito</find>
+      <find>dump</find>
+      <find>setPlayerHandValue</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\wamp64\www\projeto</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/framework/ArmoredCore/WebObjects/Layout.php" />
+        <option value="$PROJECT_DIR$/framework/ArmoredCore/WebObjects/Post.php" />
+        <option value="$PROJECT_DIR$/framework/ArmoredCore/WebObjects/URL.php" />
+        <option value="$PROJECT_DIR$/framework/ArmoredCore/WebObjects/Redirect.php" />
+        <option value="$PROJECT_DIR$/framework/ArmoredCore/Facades/Router.php" />
+        <option value="$PROJECT_DIR$/framework/ArmoredCore/WebObjects/Session.php" />
+        <option value="$PROJECT_DIR$/framework/ArmoredCore/Facades/View.php" />
+        <option value="$PROJECT_DIR$/framework/ArmoredCore/WebObjects/View.php" />
+        <option value="$PROJECT_DIR$/wlstudio/startup/dev-components.php" />
+        <option value="$PROJECT_DIR$/framework/ArmoredCore/FireWireRESTRouter.php" />
+        <option value="$PROJECT_DIR$/public/css/bootstrap-theme.css" />
+        <option value="$PROJECT_DIR$/webapp/view/home/registo.html" />
+        <option value="$PROJECT_DIR$/webapp/view/home/registo.php" />
+        <option value="$PROJECT_DIR$/webapp/view/home/registo.phtml" />
+        <option value="$PROJECT_DIR$/webapp/controller/o.php" />
+        <option value="$PROJECT_DIR$/webapp/controller/dbConfig.php" />
+        <option value="$PROJECT_DIR$/webapp/controller/usercontroller.php" />
+        <option value="$PROJECT_DIR$/wlstudio/model/Book.php" />
+        <option value="$PROJECT_DIR$/webapp/model/top.php" />
+        <option value="$PROJECT_DIR$/webapp/model/currentaccount.php" />
+        <option value="$PROJECT_DIR$/webapp/model/user.php" />
+        <option value="$PROJECT_DIR$/wlstudio/controller/BookController.php" />
+        <option value="$PROJECT_DIR$/public/js/gamescript.js" />
+        <option value="$PROJECT_DIR$/webapp/view/layout/footer.phtml" />
+        <option value="$PROJECT_DIR$/webapp/model/Top.php" />
+        <option value="$PROJECT_DIR$/webapp/controller/topController.php" />
+        <option value="$PROJECT_DIR$/webapp/view/home/top.php" />
+        <option value="$PROJECT_DIR$/webapp/view/home/adminpanel.php" />
+        <option value="$PROJECT_DIR$/webapp/controller/registerController.php" />
+        <option value="$PROJECT_DIR$/wlstudio/view/book/show.phtml" />
+        <option value="$PROJECT_DIR$/webapp/model/User.php" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/webapp/view/home/User.phtml" />
+        <option value="$PROJECT_DIR$/webapp/view/home/show.phtml" />
+        <option value="$PROJECT_DIR$/webapp/view/home/login.phtml" />
+        <option value="$PROJECT_DIR$/webapp/view/layout/header.phtml" />
+        <option value="$PROJECT_DIR$/webapp/view/home/register.phtml" />
+        <option value="$PROJECT_DIR$/webapp/model/Hand.php" />
+        <option value="$PROJECT_DIR$/public/css/gamecss.css" />
+        <option value="$PROJECT_DIR$/webapp/model/Currentaccount.php" />
+        <option value="$PROJECT_DIR$/webapp/model/Deck.php" />
+        <option value="$PROJECT_DIR$/webapp/model/BlackJackContext.php" />
+        <option value="$PROJECT_DIR$/webapp/view/layout/gameheader.phtml" />
+        <option value="$PROJECT_DIR$/webapp/controller/UserController.php" />
+        <option value="$PROJECT_DIR$/webapp/view/home/game.phtml" />
+        <option value="$PROJECT_DIR$/webapp/router.php" />
+        <option value="$PROJECT_DIR$/webapp/controller/CardTestController.php" />
+        <option value="$PROJECT_DIR$/webapp/view/home/top.phtml" />
+        <option value="$PROJECT_DIR$/webapp/controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/webapp/view/home/adminpanel.phtml" />
+        <option value="$PROJECT_DIR$/webapp/view/home/user.phtml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpTemplates">
+    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Core" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/examples" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/lib" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Protocol" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Event" />
+      <path value="$PROJECT_DIR$/vendor/Filisko/PDOplus" />
+      <path value="$PROJECT_DIR$/vendor/Dave1010/Hug" />
+      <path value="$PROJECT_DIR$/vendor/Stolz/Assets" />
+      <path value="$PROJECT_DIR$/vendor/PetrKnap/Php" />
+      <path value="$PROJECT_DIR$/vendor/Tracy/Bridges" />
+      <path value="$PROJECT_DIR$/vendor/Pd/Diagnostics" />
+      <path value="$PROJECT_DIR$/vendor/Psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/Tracy/assets" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Container" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Interop" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Log" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Http" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Hug" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Cache" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/edge" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/renderer" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/loader" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/http" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/uri" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/structure" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/Cache" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Consistency" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Websocket" />
+      <path value="$PROJECT_DIR$/vendor/legacy/Haanga" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/Aura/Includer" />
+      <path value="$PROJECT_DIR$/vendor/Aura/Di" />
+      <path value="$PROJECT_DIR$/vendor/Aura/Filter" />
+      <path value="$PROJECT_DIR$/vendor/Kdyby/Extension" />
+      <path value="$PROJECT_DIR$/vendor/Nette/PhpGenerator" />
+      <path value="$PROJECT_DIR$/vendor/Nette/Iterators" />
+      <path value="$PROJECT_DIR$/vendor/Nette/Utils" />
+      <path value="$PROJECT_DIR$/vendor/Netpromotion/Profiler" />
+      <path value="$PROJECT_DIR$/vendor/Symfony/Component" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/test" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Drivers" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Util" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Entities" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Socket" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Proxy" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Exception" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Exceptions" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Cache" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="76" />
+    <option name="width" value="1934" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="WEBlogicMVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WEBlogicMVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WEBlogicMVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WEBlogicMVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WEBlogicMVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WEBlogicMVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WEBlogicMVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="Debugger::barDump&#9;null&#9;null&#10;code sty&#9;ACTION&#9;ChangeCodeStyleScheme&#10;Session::start&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
+    <property name="recentsLimit" value="5" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projeto\webapp\view\home" />
+      <recent name="E:\wamp64\www\weblogicmvc\vendor\Pd\Diagnostics" />
+      <recent name="E:\wamp64\www\weblogicmvc\webapp\startup" />
+      <recent name="E:\wamp64\www\weblogicmvc\webapp\view\layout" />
+      <recent name="E:\wamp64\www\weblogicmvc\framework\armoredcore" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projeto\webapp\view\home" />
+      <recent name="E:\wamp64\wamp64\www\weblogicmvc\framework\ArmoredCore\WebObjects" />
+      <recent name="E:\wamp64\wamp64\www\weblogicmvc\public\html" />
+      <recent name="E:\wamp64\www\weblogicmvc\wlstudio\startup" />
+      <recent name="E:\wamp64\www\weblogicmvc\wlstudio\startup\lib" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHPUnit.weblogicmvc">
+    <configuration name="weblogicmvc" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner directory="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="startupconfig.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/webapp/startup/startupconfig.php" />
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+    </configuration>
+    <list>
+      <item itemvalue="PHPUnit.weblogicmvc" />
+      <item itemvalue="PHP Script.startupconfig.php" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.startupconfig.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7001a1a5-552a-4369-8b2d-3d517ff80e18" name="Default" comment="" />
+      <created>1462184024711</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1462184024711</updated>
+      <workItem from="1491344815131" duration="229869000" />
+      <workItem from="1492187771034" duration="11222000" />
+      <workItem from="1492254238550" duration="47648000" />
+      <workItem from="1492427300750" duration="52033000" />
+      <workItem from="1492528554961" duration="747000" />
+      <workItem from="1492529340633" duration="373000" />
+      <workItem from="1492530197275" duration="2484000" />
+      <workItem from="1492542296752" duration="17485000" />
+      <workItem from="1492626948768" duration="11495000" />
+      <workItem from="1525275636679" duration="420000" />
+      <workItem from="1525335428203" duration="4793000" />
+      <workItem from="1525360971502" duration="5103000" />
+      <workItem from="1525771086975" duration="2068000" />
+      <workItem from="1525875215383" duration="5253000" />
+      <workItem from="1525940040045" duration="3046000" />
+      <workItem from="1525944322073" duration="494000" />
+      <workItem from="1525945706937" duration="17000" />
+      <workItem from="1526468346205" duration="2647000" />
+      <workItem from="1526480009460" duration="4850000" />
+      <workItem from="1526484992325" duration="200000" />
+      <workItem from="1526566609285" duration="14000" />
+      <workItem from="1526566644079" duration="394000" />
+      <workItem from="1526572703046" duration="1178000" />
+      <workItem from="1526917286312" duration="3519000" />
+      <workItem from="1526935850830" duration="4158000" />
+      <workItem from="1526941705233" duration="158000" />
+      <workItem from="1526994308090" duration="77000" />
+      <workItem from="1527084946071" duration="7012000" />
+      <workItem from="1527092470446" duration="1407000" />
+      <workItem from="1527096280184" duration="1350000" />
+      <workItem from="1527152804425" duration="7535000" />
+      <workItem from="1527348587386" duration="4856000" />
+      <workItem from="1527436923722" duration="1387000" />
+      <workItem from="1527495782318" duration="187000" />
+      <workItem from="1527496669903" duration="4838000" />
+      <workItem from="1527541216740" duration="1316000" />
+      <workItem from="1527546560160" duration="3124000" />
+      <workItem from="1527591578593" duration="620000" />
+      <workItem from="1527596825544" duration="909000" />
+      <workItem from="1527602212272" duration="5100000" />
+      <workItem from="1527609822647" duration="2763000" />
+      <workItem from="1527618723980" duration="7824000" />
+      <workItem from="1527627051754" duration="743000" />
+      <workItem from="1527629576803" duration="4232000" />
+      <workItem from="1527633824282" duration="6959000" />
+      <workItem from="1527689530999" duration="6103000" />
+      <workItem from="1527698358458" duration="5611000" />
+      <workItem from="1527707474284" duration="718000" />
+      <workItem from="1527710639280" duration="9322000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="498061000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4955947" visible="true" weight="0.11354167" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.32929516" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" weight="0.22411004" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="4" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.34140968" />
+      <window_info id="Favorites" order="2" sideWeight="0.50440526" side_tool="true" weight="0.1933657" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.32975295" />
+      <window_info anchor="bottom" id="Application Servers" order="11" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="13" weight="0.32979852" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.4111349" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/webapp/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/user.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/adminpanel.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/register.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="66" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/controller/BlackJackContext.php" />
+    <entry file="file://$PROJECT_DIR$/webapp/controller/BlackJackGame.php" />
+    <entry file="file://$PROJECT_DIR$/webapp/controller/BlackJackHandEvaluator.php" />
+    <entry file="file://$PROJECT_DIR$/webapp/model/BlackJackGame.php" />
+    <entry file="file://$PROJECT_DIR$/public/js/gamescript.js" />
+    <entry file="file://$PROJECT_DIR$/webapp/model/Top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/layout/footer.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/controller/topController.php" />
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/adminpanel.php" />
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap-theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="88" column="10" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wlstudio/model/Book.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wlstudio/view/book/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wlstudio/view/book/create.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wlstudio/view/home/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-646">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wlstudio/view/book/show.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wlstudio/controller/BookController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="60" column="29" lean-forward="true" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/edit.phtml" />
+    <entry file="file://$PROJECT_DIR$/wlstudio/view/book/edit.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wlstudio/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/controller/registerController.php" />
+    <entry file="file://$PROJECT_DIR$/webapp/view/layout/header.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" selection-start-line="6" selection-end-line="28" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/register.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="53" column="120" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/gamecss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/login.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/model/Deck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/model/Hand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/show.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret column="38" selection-start-column="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/model/BlackJackHandEvaluator.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/controller/CardTestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-467">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#6#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/game.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="104" column="49" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="64" />
+          <folding>
+            <element signature="e#6#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/model/BlackJackContext.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="110" column="9" lean-forward="true" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/php-activerecord/ActiveRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/model/Currentaccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/top.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/layout/gameheader.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#b#0;n#div#0;n#header#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#1;n#b#0;n#div#0;n#header#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/php-activerecord/lib/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2293">
+          <caret line="1381" column="27" selection-start-line="1381" selection-start-column="27" selection-end-line="1381" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="72" column="43" lean-forward="true" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/adminpanel.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="19" column="222" selection-start-line="19" selection-start-column="222" selection-end-line="19" selection-end-column="222" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/view/home/user.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="86" column="175" selection-start-line="86" selection-start-column="175" selection-end-line="86" selection-end-column="175" />
+          <folding>
+            <element signature="e#6#38#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

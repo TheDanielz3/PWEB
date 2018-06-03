@@ -1,0 +1,74 @@
+<?php use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\URL;
+
+
+Layout::includeLayout('header') ?>
+
+<?php $user = Data::get('user');
+?>
+
+
+<!-- container -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- Article main content -->
+        <article class="col-xs-12 maincontent">
+
+
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="thin text-center">REGISTAR!</h3>
+                        <hr>
+
+                        <form action="<?= Url::toRoute('user/store') ?>" method="POST">
+                            <div class="top-margin">
+                                <label>Nome <span class="text-danger">*</span></label>
+                                <input type="text" value="<?=$user->nome?>" class="form-control" name="nome" required>
+
+                            </div>
+                            <div class="top-margin">
+                                <label>Apelido <span class="text-danger">*</span></label>
+                                <input type="text" value="<?=$user->apelido?>" class="form-control" name="apelido" required>
+
+                            </div>
+                            <div class="top-margin">
+                                <label>Username <span class="text-danger">*</span></label>
+                                <input type="text" value="<?=$user->username?>" class="form-control" name="username"required>
+                            </div>
+                            <div class="top-margin">
+                                <label>Password <span class="text-danger">*</span></label>
+                                <input type="password" value="<?=$user->password?>" class="form-control" name="password"required>
+
+                            </div>
+                            <div class="top-margin">
+                                <label>Data nascimento <span class="text-danger">*</span></label>
+                                <input type="date" value="<?=$user->datanascimento?>" class="form-control" name="datanascimento"required>
+
+                            </div>
+                            <div class="top-margin">
+                                <label>Email <span class="text-danger">*</span></label>
+                                <input type="email"  value="<?=$user->email?>"class="form-control" name="email"required>
+
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-4 text-right">
+                                    <button class="btn btn-action" type="submit">Registar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+        <!-- /Article -->
+
+    </div>
+</div>    <!-- /container -->
+

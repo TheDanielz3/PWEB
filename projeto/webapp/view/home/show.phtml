@@ -1,0 +1,68 @@
+<?php use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\URL;
+
+Layout::includeLayout('gameheader') ?>
+<?php $user = Data::get('user');?>
+
+    <!-- container -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Article main content -->
+            <article class="col-xs-12 maincontent">
+                <header class="page-header">
+                    <h1 class="page-title">Ver Utilizador</h1>
+                </header>
+
+                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h2><b><?php echo $user->nome ." ". $user->apelido ?></b></h2>
+                            <hr>
+
+                            <form method="post" action="<?=Url::toRoute('user/index')?>">
+                                <div class="top-margin">
+                                    <label>Username <span class="text-danger">*</span></label>
+                                    <input readonly="true" type="text" value="<?=$user->username?>" name="username" class="form-control">
+                                </div>
+                                <div class="top-margin">
+                                    <label>Nome <span class="text-danger">*</span></label>
+                                    <input readonly="true" type="text" value="<?=$user->nome?>" name="nome" class="form-control">
+                                    <div class="top-margin">
+                                        <label>Apelido <span class="text-danger">*</span></label>
+                                        <input readonly="true" type="text" value="<?=$user->apelido?>" name="apelido" class="form-control">
+                                    </div>
+                                    <div class="top-margin">
+                                        <label>Email <span class="text-danger">*</span></label>
+                                        <input readonly="true" type="text" value="<?=$user->email?>" name="email" class="form-control">
+                                    </div>
+                                    <div class="top-margin">
+                                        <label>Password<span class="text-danger">*</span></label>
+                                        <input readonly="true" type="text" value="<?=$user->password?>" name="password" class="form-control">
+                                    </div>
+                                    <div class="top-margin">
+                                        <label>Tipo <span class="text-danger">*</span></label>
+                                        <input readonly="true" type="text" value="<?=$user->type?>" name="type" class="form-control">
+                                    </div>
+
+
+                                    <hr>
+
+                                    <div class="col-lg-4 text-right">
+                                        <button class="btn btn-action" type="submit">Voltar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                     </div>
+                </div>
+
+        </article>
+        <!-- /Article -->
+
+    </div>
+    </div>	<!-- /container -->
+
+<?php Layout::includeLayout('footer') ?>

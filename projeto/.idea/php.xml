@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Core" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/examples" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/lib" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Protocol" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Event" />
+      <path value="$PROJECT_DIR$/vendor/Filisko/PDOplus" />
+      <path value="$PROJECT_DIR$/vendor/Dave1010/Hug" />
+      <path value="$PROJECT_DIR$/vendor/Stolz/Assets" />
+      <path value="$PROJECT_DIR$/vendor/PetrKnap/Php" />
+      <path value="$PROJECT_DIR$/vendor/Tracy/Bridges" />
+      <path value="$PROJECT_DIR$/vendor/Pd/Diagnostics" />
+      <path value="$PROJECT_DIR$/vendor/Psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/Tracy/assets" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Container" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Interop" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Log" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Http" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Hug" />
+      <path value="$PROJECT_DIR$/vendor/Psr/Cache" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/edge" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/renderer" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/loader" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/http" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/uri" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/structure" />
+      <path value="$PROJECT_DIR$/vendor/Windwalker/Cache" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Consistency" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Websocket" />
+      <path value="$PROJECT_DIR$/vendor/legacy/Haanga" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/Aura/Includer" />
+      <path value="$PROJECT_DIR$/vendor/Aura/Di" />
+      <path value="$PROJECT_DIR$/vendor/Aura/Filter" />
+      <path value="$PROJECT_DIR$/vendor/Kdyby/Extension" />
+      <path value="$PROJECT_DIR$/vendor/Nette/PhpGenerator" />
+      <path value="$PROJECT_DIR$/vendor/Nette/Iterators" />
+      <path value="$PROJECT_DIR$/vendor/Nette/Utils" />
+      <path value="$PROJECT_DIR$/vendor/Netpromotion/Profiler" />
+      <path value="$PROJECT_DIR$/vendor/Symfony/Component" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/test" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Drivers" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Util" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Entities" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Socket" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Proxy" />
+      <path value="$PROJECT_DIR$/vendor/Hoa/Exception" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Exceptions" />
+      <path value="$PROJECT_DIR$/vendor/phpFastCache/Cache" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7" />
+</project>

@@ -1,0 +1,69 @@
+<?php
+    use ArmoredCore\WebObjects\URL;
+    use ArmoredCore\WebObjects\Layout;
+    use ArmoredCore\WebObjects\View;
+    use ArmoredCore\WebObjects\Data;
+    use ArmoredCore\WebObjects\Asset;
+
+    $context = Data::get('context');
+?>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <?php        //introduzir o valor da aposta
+            if($context->getGameState() == 'Bet')
+            {
+                ?>
+                    <form method="post" action="<?= URL::toRoute('user/PostBet')?>">
+                        <input type="number" value="BetValue">
+                        <input type="submit" value="Bet" name="BetInput">
+                    </form>
+
+                <?php
+
+            }
+            echo "<h1>Server Hand</h1>";
+            $hand = $context->getServerHand();
+            if(!is_null($hand))
+            {
+                echo $hand->getHand()[0];
+            }
+
+            echo "<br/><br/>";
+
+            echo "<h1>Player Hand</h1>";
+            $hand = $context->getPlayerHand();
+            if(!is_null($hand))
+            {
+                foreach($hand->getHand() as $h){?>
+                    <img src="<?= Asset::image($h . ".png") ?>">
+
+                    <?php }?>
+                <br>
+            <?php  } ?>
+
+
+
+            <?php
+            if($context->getGameState() == 'Hit')
+            {?>
+                    <a href="<?=URL::toRoute('user/Hit') ?>" >Hit</a>
+
+                <?php
+            }
+            echo "<br>";
+
+            if($context ->getGameState() == 'Stand')
+            {?>
+                    <a>Stand</a>
+           <?php }
+                ?>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<?php use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\URL;
+
+Layout::includeLayout('header') ?>
+
+<?php $user = Data::get('user')?>
+
+<!-- container -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- Article main content -->
+        <article class="col-xs-12 maincontent">
+
+
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="thin text-center">Login!</h3>
+                        <p class="text-center text-muted">Se ainda nao possui conta, <a href="register">REGISTAR</a></p>
+                        <hr>
+
+                        <form action="<?= Url::toRoute('user/login') ?>" method="POST">
+                            <div class="top-margin">
+                                <label>Username <span class="text-danger">*</span></label>
+                                <input type="text" value="<?=$user->username?>" class="form-control" name="username">
+                            </div>
+                            <div class="top-margin">
+                                <label>Password <span class="text-danger">*</span></label>
+                                <input type="password" value="<?=$user->password?>" class="form-control" name="password">
+
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-lg-4 text-right">
+                                    <button class="btn btn-action" type="submit">Sign In</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+        <!-- /Article -->
+
+    </div>
+</div>	<!-- /container -->

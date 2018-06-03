@@ -1,0 +1,126 @@
+<?php use ArmoredCore\WebObjects\Data;
+use ArmoredCore\WebObjects\Layout;
+use ArmoredCore\WebObjects\Asset;
+use ArmoredCore\WebObjects\URL;
+use ArmoredCore\WebObjects\Session;
+use ArmoredCore\WebObjects\Redirect;
+
+Layout::includeLayout('gameheader') ?>
+<!DOCTYPE html>
+<?php
+$user = Data::get('user');
+$userSession = Session::get('user');
+$bet = Session::get('bet');
+$status = Session::get('Status');
+
+$games = Session::get('game');
+
+$serverhandvalue = $games->getServerHandValue();
+$playerhandvalue = $games->getPlayerHandValue();
+$playerhand = $games->getPlayerHand();
+$serverhand = $games->getServerHand();
+
+
+Session::set('playerhandvalue', $playerhandvalue);
+Session::set('serverhandvalue', $serverhandvalue);
+
+
+
+
+
+
+
+?>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+
+</head>
+<body style="background-color: #2b2b2b" >
+
+
+    <div class="game" >
+        <div class="cards" >
+
+            <?php
+            if($bet!=0) {
+                if (count($serverhand->getHand()) < 5) {
+                    foreach ($serverhand->getHand() as $hand) {
+
+
+                        echo "<img class='image' src=\"../../public/img/cards/$hand.png\"  >";
+
+
+                    }
+                } else {
+                    Redirect::toRoute('game/index');
+                } ?>
+
+                <br>
+                <h4>Cartas da mesa </h4>
+                <br>
+                <h4>Minhas cartas </h4>
+
+
+                <?php
+                foreach ($playerhand->getHand() as $hand) {
+
+
+                    echo "<img class='image' src=\"../../public/img/cards/$hand.png\"  >";
+
+                }
+                if($playerhandvalue>21){
+
+                    Redirect::toRoute('game/PlayerLose');
+
+
+
+                }elseif($serverhandvalue>21){
+
+                    Redirect::toRoute('game/ServerLose');
+
+                }
+                elseif($playerhandvalue==21){
+
+                    Redirect::toRoute('game/ServerLose');
+                }
+                elseif($serverhandvalue==21){
+
+                    Redirect::toRoute('game/PlayerLose');
+                }
+
+            } else {
+
+             ?>
+            <b style="font-size: 30px"> <?php echo$status?></b>
+            <?php
+
+            } ?>
+
+        </div>
+
+
+
+        <a  class= "button button1" role="button">2X</a>
+        <a href="<?=Url::toRoute('game/pedircarta')?>" class= "button button2" role="button">Pedir</a>
+        <a href="<?=Url::toRoute('game/check')?>" class= "button button3" role="button">Ficar</a>
+
+        <div class="bet">
+
+            <h2><b><?php echo"Valor de aposta: ". $bet?></b></h2>
+            <div class="player">
+                <h2><b><?php echo $userSession->username?></b></h2>
+
+                <a href="<?=Url::toRoute('game/index')?>" class="button button_bet" role="button">Apostar</a>
+            </div>
+        </div>
+
+        <a href="<?=Url::toRoute('user/change_bet5')?>" class="button button5" role="button">5</a>
+        <a href="<?=Url::toRoute('user/change_bet10')?>" class="button button10" role="button">10</a>
+        <a href="<?=Url::toRoute('user/change_bet25')?>" class= "button button25" role="button">25</a>
+
+
+
+    </div>
+</body>
+</html>

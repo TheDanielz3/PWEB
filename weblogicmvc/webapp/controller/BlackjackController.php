@@ -12,6 +12,8 @@ use ArmoredCore\WebObjects\Post;
  * Time: 13:35
  */
 
+
+
 class BlackjackController extends BaseController
 {
     public function Bet()
@@ -22,7 +24,7 @@ class BlackjackController extends BaseController
 
         Session::set('context', $context);
 
-        return View::make('blackjack.GameView', ['context' => $context]);
+        return View::make('user.GameView', ['context' => $context]);
     }
 
     public function PostBet()
@@ -55,11 +57,25 @@ class BlackjackController extends BaseController
 
         Session::set('context',$context);
 
-        return View::make('blackjack.GameView', ['context' => $context]);
+        return View::make('user.GameView', ['context' => $context]);
     }
 
     public function Hit()
     {
+        $context = Session::get('context');
+        $deck = $context->getDeck();
+        $userHand = $context->getPlayerHand();
+
+        $eval = new BlackjackHandEvaluator();
+
+        $eval->evaluateHand($userHand);
+
+
+        $userHand->addToHand($deck->dealCards(1));
+        $context->setPlayerHand($userHand);
+        Session::set('context',$context);
+        return View::make('user.GameView', ['context' => $context]);
+
 
     }
 

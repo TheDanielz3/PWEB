@@ -1,0 +1,9 @@
+<style>
+	#nette-debug .nette-panel pre { white-space: pre; font-family: monospace; }
+</style>
+<h1>WEBLogic Extreme Cache (c)</h1>
+<table>
+	<?php foreach($this->cacheBenchmarks as $key => $val) { ?>
+	<tr><th><?= htmlspecialchars($key); ?></th><td><pre><?= $val; ?></pre></td></tr>
+	<?php } ?>
+</table>
